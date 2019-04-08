@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Fontin';
+    src: url('Fontin-Regular.ttf');
+}
+
+* {
+    cursor: default;
+}
+
+body {
+    margin-top: 15px;
+    font-family: "Fontin";
+    background: #1e1e1e;
+    color: #c8c8c8;
+    line-height: 7px;
+    font-size: 16px;
+}
+
+a {
+    color: #c8c8c8;
+}
+
+a:hover {
+    color: #c8c8c8;
+}
+
+.larger-font {
+    font-size: 18px;
+}
+
+.enemy-progress {
+    margin-top: 10px;
+    height: 6px;
+}
+
+.game-saved {
+    cursor: default;
+    color: #555;
+}
+
+.chaos-click {
+    margin-top: 22px;
+}
+
+.chaos-click-image:hover {
+    cursor: pointer;
+}
+
+.equipment {
+    /* margin-top: 30px; */
+}
+
+.item-magic {
+    color: #5E81AC;
+}
+
+.item-rare {
+    color: #EBCB8B;
+}
+
+.item-unique {
+    color: #BF616A;
+}
+
+.item-legendary {
+    color: #B48EAD;
+}
+
+
+.table {
+    color: #c8c8c8;
+}
+
+.table {
+    border-bottom:0px !important;
+}
+.table th, .table td {
+    border: 1px !important;
+    padding: 13px;
+}
+.fixed-table-container {
+    border:0px !important;
+}
+
+.stats-list {
+    line-height: 20px;
+}
+
+.shadow {
+    background: #1a1a1a;
+}
+
+.drop-container {
+    margin-top: 10px;
+    line-height: 32px;
+}
+
+.drop {
+    cursor: pointer;
+    font-size: 13px;
+    height: 32px;
+    padding: 0 8px 0 8px;
+    background-color: #101010;
+    border: 1px solid #252525;
+}
+
+.drop:hover {
+    border: 1px solid #808080;
+}
+
+.drop > span {
+    height: 10px;
+    cursor: pointer;
+}
+
+.drop-options {
+    font-size: 16px;
+}
+
+.drop-options:hover {
+    cursor: pointer;
+    display: inline;
+    background-color: #000;
+}
+
+.footer {
+    margin-top: 25px;
+}
+
+.weapons-container {
+    margin-bottom: 17px;
+}
+
+.tab-switcher {
+    font-size: 20px;
+}
+
+.tab-switcher span:hover {
+    text-decoration: underline;
+}
