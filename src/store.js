@@ -7,13 +7,13 @@ let game = new Game();
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    game: game
-  },
-  mutations: {
+    state: {
+        game: game
+    },
+    mutations: {
 
-  },
-  actions: {
+    },
+    actions: {
 
-  }
+    }
 })

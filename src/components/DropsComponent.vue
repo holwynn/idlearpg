@@ -9,7 +9,7 @@
                 <li class="list-inline-item drop"><span class="item-rare">Druid Gloves</span></li>
                 <li class="list-inline-item drop"><span class="item-unique">Fireant Axe</span></li>
                 <li class="list-inline-item drop"><span class="item-legendary">Exalted Orb</span></li>
-                
+
                 <li class="list-inline-item drop-options"><small>loot all</small></li>
                 <li class="list-inline-item drop-options"><small>clear all</small></li>
             </ul>
@@ -19,20 +19,16 @@
 
 <script>
 export default {
-  name: 'DropsComponent',
-  props: {
-    msg: String
-  },
-  components: {
-      
-  },
-  methods: {
+    name: 'DropsComponent',
+    props: {
+        msg: String
+    },
+    components: {
 
-  }
+    },
+    methods: {
+
+    }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>

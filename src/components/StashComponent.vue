@@ -1,44 +1,39 @@
 <template>
-  <div class="container">
-    <div class="stash">
-        <table class="table table-sm table-striped shadow">
-            <thead>
-                <tr>
-                    <th>Item</th>
-                    <th>Type</th>
-                    <th>Requirement</th>
-                    <th>Options</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="item-rare">Aether Memory </td>
-                    <td>Memory</td>
-                    <td>level 68</td>
-                    <td><span class="">use</span> - <span class="text-success">vendor</span></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container">
+            <div class="stash">
+                <table class="table table-sm table-striped shadow">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Type</th>
+                            <th>Requirement</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="item-rare">Aether Memory </td>
+                            <td>Memory</td>
+                            <td>level 68</td>
+                            <td><span class="">use</span> - <span class="text-success">vendor</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: 'StashComponent',
-  props: {
-    msg: String
-  },
-  components: {
+    name: 'StashComponent',
+    props: {
+        msg: String
+    },
+    components: {
 
-  },
-  methods: {
+    },
+    methods: {
 
-  }
+    }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
-</style>
