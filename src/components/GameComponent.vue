@@ -1,22 +1,48 @@
 <template>
-    <div class="col-md-6">
-        <p>
-            <strong class="text-info">nicegame</strong> level 81 |
-            exalted orbs: 12 |
-            chaos orbs: {{ this.$store.state.game.money }}
-        </p>
+    <div class="row widget widget-dark">
+        <div class="col-md-12 widget-content">
+            <p style="float: left;">
+                <strong class="item-magic">ahw</strong>
+                <small> Magic Gladiator</small> 98
+            </p>
 
-        <p class="text-center chaos-click">
-            <img class="chaos-click-image" @click="click" src="chaos.png" alt="chaos-click">
-        </p>
+            <p style="float: right;">
+                <strong class="item-magic">Aether:</strong> 0
+                <strong class="item-rare">Gold:</strong> {{ Math.floor(game.money) }}
+            </p>
 
-        <!-- Area -->
-        <area-component></area-component>
+            <span class="clearfix"></span>
+            <!-- Area -->
+            <area-component></area-component>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-center attack-click">
+                        <img class="attack-click-image" @click="click" src="../assets/sword.png" alt="attack-click-image">
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <p class="text-center">Damage</p>
+
+                    <ul class="text-center list-unstyled damage-stats">
+                        <li class="list"><span class="text-fire">Fire: </span>33.4k</li>
+                        <li class="list"><span class="text-cold">Cold: </span>194</li>
+                        <li class="list"><span class="text-lightning">Lightning: </span>112</li>
+                        <li class="list"><span class="text-light">Physical: </span>182k</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Drrops -->
+            <drops-component></drops-component>
+        </div>
     </div>
 </template>
 
 <script>
 import AreaComponent from './AreaComponent';
+import DropsComponent from './DropsComponent';
 
 export default {
     name: 'GameComponent',
@@ -25,10 +51,17 @@ export default {
     },
     components: {
           AreaComponent,
+          DropsComponent
+    },
+    data() {
+        return {
+            game: this.$store.state.game
+        }
     },
     methods: {
         click() {
-        this.$store.state.game.earn(1);
+            this.game.clickAttack();
+            // const element = document.querySelector('.attack-click-image').setAttribute();
         }
     }
 }

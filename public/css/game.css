@@ -8,11 +8,11 @@
 }
 
 body {
-    margin-top: 15px;
+    height: 2450px;
+    margin-top: 80px;
     font-family: "Fontin";
     background: #1e1e1e;
     color: #c8c8c8;
-    line-height: 7px;
     font-size: 16px;
 }
 
@@ -29,7 +29,6 @@ a:hover {
 }
 
 .enemy-progress {
-    margin-top: 10px;
     height: 6px;
 }
 
@@ -38,16 +37,21 @@ a:hover {
     color: #555;
 }
 
-.chaos-click {
-    margin-top: 22px;
+.attack-click {
+    /* border: 1px solid black; */
+    /* margin-top: 22px; */
 }
 
-.chaos-click-image:hover {
+.attack-click-image {
+    height: 100px;
+}
+
+.attack-click-image:hover {
     cursor: pointer;
 }
 
-.equipment {
-    /* margin-top: 30px; */
+.item:hover {
+    text-decoration: underline;
 }
 
 .item-magic {
@@ -71,35 +75,29 @@ a:hover {
     color: #c8c8c8;
 }
 
-.table {
-    border-bottom:0px !important;
-}
-.table th, .table td {
-    border: 1px !important;
-    padding: 13px;
-}
-.fixed-table-container {
-    border:0px !important;
-}
-
 .stats-list {
     line-height: 20px;
 }
 
-.shadow {
+.widget {
+    border: 1px solid #252525;
+    margin: 7px -9px 0 -9px;
+}
+
+.widget-dark > * {
     background: #1a1a1a;
 }
 
-.drop-container {
-    margin-top: 10px;
-    line-height: 32px;
+.widget-content {
+    padding: 12px;
+    line-height: 14px;
 }
 
 .drop {
     cursor: pointer;
     font-size: 13px;
-    height: 32px;
-    padding: 0 8px 0 8px;
+    padding: 6px;
+    margin-bottom: 4px;
     background-color: #101010;
     border: 1px solid #252525;
 }
@@ -126,15 +124,95 @@ a:hover {
 .footer {
     margin-top: 25px;
 }
+.tab-switcher {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
 
-.weapons-container {
+.tab-switcher-element {
+    display: inline-block;
+    margin-right: 10px;
+    color: #D8DEE9;
+}
+
+.tab-switcher-element-active {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.tab-switcher-element:hover {
+    text-decoration: underline;
+}
+
+.area-container {
     margin-bottom: 17px;
 }
 
-.tab-switcher {
-    font-size: 20px;
+.area-monster-count {
+    margin-left: 15px;
 }
 
-.tab-switcher span:hover {
-    text-decoration: underline;
+.area-monster-health {
+    font-size: 14px;
+    text-align: center;
+    display: block;
+}
+
+.current-area {
+    /*border: 1px solid black;*/
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.table th, .table td {
+    border: none;
+    padding: 13px;
+}
+.fixed-table-container {
+    border:0px !important;
+}
+
+.bg-success {
+    background: #A3BE8C !important;
+}
+
+.bg-warning {
+    background: #EBCB8B !important;
+}
+
+.bg-danger {
+    background: #BF616A !important;
+}
+
+.text-fire {
+    color: #BF616A;
+}
+
+.text-cold {
+    color: #5E81AC;
+}
+
+.text-lightning {
+    color: #88C0D0;
+}
+
+.damage-stats {
+    /*text-align: center;*/
+}
+
+.damage-stats > li {
+    margin-bottom: 4px;
+}
+
+small {
+    color: #707070 !important;
+}
+
+.farm-button {
+    color: #707070;
+    font-size: 13px;
+}
+
+.farm-button-active {
+    color: #BF616A;
 }

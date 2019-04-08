@@ -1,7 +1,7 @@
 <template>
-    <div class="container">
+    <div class="">
         <div class="shop">
-            <table class="table table-sm table-striped shadow">
+            <table class="table table-sm table-striped">
                 <thead>
                     <tr>
                         <th>Item</th>
@@ -17,14 +17,14 @@
                         <td>Gloves</td>
                         <td>level 24</td>
                         <td>12,741 💰</td>
-                        <td><span class="item-legendary">stash</span> - <span class="text-success">vendor</span></td>
+                        <td><span class="text-success">purchase</span></td>
                     </tr>
                     <tr>
                         <td class="item-magic">Serpent Robes</td>
                         <td>Body Armour</td>
                         <td>level 37</td>
                         <td>42,912 💰</td>
-                        <td><span class="item-legendary">stash</span> - <span class="text-success">vendor</span></td>
+                        <td><span class="text-success">purchase</span></td>
                     </tr>
                 </tbody>
             </table>

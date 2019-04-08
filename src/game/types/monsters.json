@@ -1,0 +1,35 @@
+{
+    "uniques": {
+        "vaelastrasz": {
+            "name": "Vaelastrasz the Corrupt",
+            "hp": 700,
+            "gold": 3500
+        }
+    },
+    "common": {
+        "bat": {
+            "name": "Bat",
+            "hp": 54,
+            "minlevel": 1,
+            "gold": 12
+        },
+        "zombie": {
+            "name": "Zombie",
+            "hp": 70,
+            "minlevel": 1,
+            "gold": 18
+        },
+        "crab": {
+            "name": "Crab",
+            "hp": 90,
+            "minlevel": 1,
+            "gold": 13
+        },
+        "seawitch": {
+            "name": "Sea Witch",
+            "hp": 34,
+            "minlevel": 1,
+            "gold": 41
+        }
+    }
+}

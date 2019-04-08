@@ -1,6 +1,6 @@
 <template>
-    <div class="row drop-container">
-        <div class="col-md-12">
+    <div class="row">
+        <div v-if="drops.length > 0" class="col-md-12">
             <ul class="list-inline">
                 <li class="list-inline-item">Drops:</li>
                 <li class="list-inline-item drop"><span class="item-normal">Identify Scroll</span></li>
@@ -14,6 +14,9 @@
                 <li class="list-inline-item drop-options"><small>clear all</small></li>
             </ul>
         </div>
+        <div v-else class="col-md-12">
+            <p>No drops</p>
+        </div>
     </div>
 </template>
 
@@ -21,7 +24,12 @@
 export default {
     name: 'DropsComponent',
     props: {
-        msg: String
+
+    },
+    data() {
+        return {
+            drops: [1]
+        }
     },
     components: {
 

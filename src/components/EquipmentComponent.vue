@@ -1,31 +1,27 @@
 <template>
-    <div class="col-md-6 shadow">
-        <div class="row">
-            <div class="col-md-12">
+    <div class="row widget widget-dark">
+        <div class="col-md-12 widget-content">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">Equipment</p>
 
-                <!-- figure out why the fuck i need to br here -->
-                <br> <br>
-
-
-                <p class="text-center">Equipment</p>
-
-                <div class="">
-                    <div class="row weapons-container">
+                    <div class="row">
                         <div class="col-md-6">
                             <p class="text-center">Main hand</p>
-                            <a href="#"><p class="text-center"><span class="item-unique">Brightbeak</span></p></a>
+                            <p class="text-center"><span class="item">Rusty Dagger</span></p>
                         </div>
                         <div class="col-md-6">
                             <p class="text-center">Offhand</p>
-                            <a href="#"><p class="text-center"><span class="item-rare">Bastion Barrier Vaal Buckler</span></p></a>
+                            <p class="text-center"><span class="item">None</span></p>
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-6">
                             <p>Helmet</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="item-magic" href="#">Eternal Burgonet of Zenith</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
 
@@ -34,7 +30,7 @@
                             <p>Body Armour</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="item-unique" href="#">Kaom's Heart</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
 
@@ -43,7 +39,7 @@
                             <p>Belt</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="item-magic" href="#">Virile Leather Belt of the Snake</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
 
@@ -52,7 +48,7 @@
                             <p>Gloves</p>
                         </div>
                         <div class="col-md-6">
-                            <a href="#">Wool Gloves</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
 
@@ -61,7 +57,7 @@
                             <p>Boots</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="item-unique" href="#">Kaom's Way</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
                     <div class="row">
@@ -69,7 +65,7 @@
                             <p>Left ring</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="item-rare" href="#">Death Sign Ruby Ring</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
 
@@ -78,7 +74,7 @@
                             <p>Right ring</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="item-rare" href="#">Spiral Loop Amethyst Ring</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
 
@@ -87,9 +83,16 @@
                             <p>Amulet</p>
                         </div>
                         <div class="col-md-6">
-                            <a class="item-unique" href="#">Atziri's Foible</a>
+                            <span class="item">None</span>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">Stats</p>
+                    <p>Damage per click: {{ damagePerClick }}</p>
+                    <p>Damage per second: 0</p>
                 </div>
             </div>
         </div>
@@ -102,8 +105,10 @@ export default {
     props: {
         msg: String
     },
-    components: {
-
+    computed: {
+        damagePerClick() {
+            return this.$store.state.game.damage
+        }
     },
     methods: {
     }

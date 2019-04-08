@@ -1,0 +1,47 @@
+{
+    "prefixes": [
+        "Entombed", "Fractured", "Obscene", "Molten"
+    ],
+    "suffixes": [
+        "Crypt", "Temple", "Passage", "Church"
+    ],
+    "campaign": {
+        "Act 1": [
+            "Gates of Hell",
+            "The Molten Passage",
+            "Lava Lake",
+            "The Desert",
+            "The Sepulchre"
+        ],
+        "Act 2": [
+            "The Cemetery",
+            "Forbidden Forest",
+            "Dark Mantra"
+        ]
+    },
+    "Gates of Hell": {
+        "monsters": 5,
+        "level": 1
+    },
+    "The Molten Passage": {
+        "monsters": 5,
+        "level": 2
+    },
+    "Lava Lake": {
+        "monsters": 5,
+        "level": 3
+    },
+    "The Desert": {
+        "monsters": 5,
+        "level": 4
+    },
+    "The Sepulchre": {
+        "monsters": 5,
+        "level": 5,
+        "uniques": ["vaelastrasz"]
+    },
+    "The Cemetery": {
+        "monsters": 5,
+        "level": 6
+    }
+}

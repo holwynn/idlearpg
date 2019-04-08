@@ -1,7 +1,16 @@
 <template>
-    <div id="app">
-        <header-component></header-component>
-        <main-component></main-component>
+    <div id="app" class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <header-component></header-component>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <main-component></main-component>
+            </div>
+        </div>
     </div>
 </template>
 

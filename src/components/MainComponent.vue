@@ -1,20 +1,19 @@
 <template>
-    <div class="container">
+    <div class="">
         <div class="row">
-            <game-component></game-component>
-            <equipment-component></equipment-component>
+            <div class="col-lg-6 col-md-12">
+                <game-component></game-component>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <equipment-component></equipment-component>
+            </div>
         </div>
 
         <div class="row">
-            <p class="tab-switcher">
-                <span @click="setTab('inventory')">Inventory</span> /
-                <span @click="setTab('shop')">Shop</span> /
-                <span @click="setTab('stash')">Stash</span>
-            </p>
-
-            <inventory-component v-if="currentTab == 'inventory'"></inventory-component>
-            <shop-component v-if="currentTab == 'shop'"></shop-component>
-            <stash-component v-if="currentTab == 'stash'"></stash-component>
+            <div class="col-md-12">
+                <tab-switcher-component></tab-switcher-component>
+            </div>
         </div>
     </div>
 </template>
@@ -25,6 +24,8 @@ import EquipmentComponent from './EquipmentComponent';
 import InventoryComponent from './InventoryComponent';
 import ShopComponent from './ShopComponent';
 import StashComponent from './StashComponent';
+import DropsComponent from './DropsComponent';
+import TabSwitcherComponent from './TabSwitcherComponent';
 
 export default {
     name: 'MainComponent',
@@ -36,7 +37,9 @@ export default {
         EquipmentComponent,
         InventoryComponent,
         ShopComponent,
-        StashComponent
+        StashComponent,
+        DropsComponent,
+        TabSwitcherComponent
     },
     data() {
         return {
@@ -45,8 +48,8 @@ export default {
     },
     methods: {
         setTab(tabName) {
-        this.currentTab = tabName;
-        console.log(this.currentTab);
+            this.currentTab = tabName;
+            console.log(this.currentTab);
         }
     }
 }

@@ -1,13 +1,15 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Aether Memories</h1>
-                <p class="larger-font"><span class="game-saved">save game</span> - <a href="#">load game</a> - <a href="#">export save</a> - <a href="#">new game</a></p>
-                <hr class="bg-info">
-            </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h3>Hjol</h3>
 
-            <hr class="bg-info">
+            <div class="row">
+                <div class="col-md-12">
+                    The idle ARPG
+                </div>
+            </div>
+            <p></p>
+            <p class="larger-font"><span class="game-saved">save game</span> - <a href="#">load game</a> - <a href="#">export save</a> - <a href="#">new game</a></p>
         </div>
     </div>
 </template>
