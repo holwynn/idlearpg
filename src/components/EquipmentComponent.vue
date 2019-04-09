@@ -1,98 +1,59 @@
 <template>
     <div class="row widget widget-dark">
-        <div class="col-md-12 widget-content">
+        <div class="col-md-12 widget-content equipment-container">
             <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">Equipment</p>
+                <div class="col-sm-12">
+                    <p class="text-center text-lightning">Equipment</p>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p class="text-center">Main hand</p>
-                            <p class="text-center"><span class="item">Rusty Dagger</span></p>
-                        </div>
-                        <div class="col-md-6">
-                            <p class="text-center">Offhand</p>
-                            <p class="text-center"><span class="item">None</span></p>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Main Hand</small>
+                        <small class="item-legendary">Cleaver</small>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Helmet</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Off Hand</small>
+                        <small class="item-legendary">Queen's Shield</small>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Body Armour</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Helmet</small>
+                        <small class="item-rare">Royal Crown</small>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Belt</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Body Armour</small>
+                        <small class="item-rare">Dragonite Chestplate</small>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Gloves</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Belt</small>
+                        <small class="item-rare">Vanguard's Belt</small>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Boots</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Left ring</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Gloves</small>
+                        <small class="item-legendary">Hjol's Gloves</small>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Right ring</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Boots</small>
+                        <small class="item-magic">Potato Sack</small>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>Amulet</p>
-                        </div>
-                        <div class="col-md-6">
-                            <span class="item">None</span>
-                        </div>
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Amulet</small>
+                        <small class="item-magic">Rosemary</small>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">Stats</p>
-                    <p>Damage per click: {{ damagePerClick }}</p>
-                    <p>Damage per second: 0</p>
+
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Ring</small>
+                        <small class="item-rare">Wedding Ring</small>
+                    </div>
+
+                    <div class="equipment-item">
+                        <small class="equipment-item-type-header">Ring</small>
+                        <small class="item-rare">Ruby Ring</small>
+                    </div>
                 </div>
             </div>
         </div>

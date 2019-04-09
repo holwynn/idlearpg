@@ -3,11 +3,11 @@
         <div class="col-md-12 widget-content">
             <p style="float: left;">
                 <strong class="item-magic">ahw</strong>
-                <small> Magic Gladiator</small> 98
+                <small> Wretched Witch</small> 98
             </p>
 
             <p style="float: right;">
-                <strong class="item-magic">Aether:</strong> 0
+                <!-- <strong class="item-legendary">Fragments:</strong> 0 -->
                 <strong class="item-rare">Gold:</strong> {{ Math.floor(game.money) }}
             </p>
 
@@ -23,14 +23,26 @@
                 </div>
 
                 <div class="col-md-6">
-                    <p class="text-center">Damage</p>
+                    <div class="float-left">
+                        <small>Stats</small>
+                        <ul class="list-unstyled damage-stats">
+                            <li class="list"><span class="text-fire">Fire: </span>33.4k</li>
+                            <li class="list"><span class="text-cold">Cold: </span>194</li>
+                            <li class="list"><span class="text-lightning">Lightning: </span>112</li>
+                            <li class="list"><span class="text-light">Physical: </span>182k</li>
+                        </ul>
+                    </div>
 
-                    <ul class="text-center list-unstyled damage-stats">
-                        <li class="list"><span class="text-fire">Fire: </span>33.4k</li>
-                        <li class="list"><span class="text-cold">Cold: </span>194</li>
-                        <li class="list"><span class="text-lightning">Lightning: </span>112</li>
-                        <li class="list"><span class="text-light">Physical: </span>182k</li>
-                    </ul>
+                    <div class="float-right">
+                        <ul class="list-unstyled game-menu-button">
+                            <li class="list"><small class="game-menu-button-active">Equipment</small></li>
+                            <li class="list"><small>Inventory</small></li>
+                            <li class="list"><small>Town</small></li>
+                            <li class="list"><small class="game-menu-button-active">Stash</small></li>
+                        </ul>
+                    </div>
+
+                    <div class="clearfix"></div>
                 </div>
             </div>
 

@@ -1,20 +1,29 @@
 <template>
     <div class="">
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-2">
+                <equipment-component></equipment-component>
+            </div>
+            <div class="col-lg-8">
                 <game-component></game-component>
             </div>
 
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-2">
                 <equipment-component></equipment-component>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-lg-8 offset-lg-2">
                 <tab-switcher-component></tab-switcher-component>
             </div>
         </div>
+
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <tab-switcher-component></tab-switcher-component>
+            </div>
+        </div> -->
     </div>
 </template>
 

@@ -20,6 +20,10 @@ a {
     color: #c8c8c8;
 }
 
+#app {
+    max-width: 960px;
+}
+
 a:hover {
     color: #c8c8c8;
 }
@@ -56,19 +60,19 @@ a:hover {
 }
 
 .item-magic {
-    color: #5E81AC;
+    color: #5E81AC !important;
 }
 
 .item-rare {
-    color: #EBCB8B;
+    color: #EBCB8B !important;
 }
 
 .item-unique {
-    color: #BF616A;
+    color: #BF616A !important;
 }
 
 .item-legendary {
-    color: #B48EAD;
+    color: #BF616A !important;
 }
 
 
@@ -77,7 +81,7 @@ a:hover {
 }
 
 .stats-list {
-    line-height: 20px;
+    /*line-height: 20px;*/
 }
 
 .widget {
@@ -197,8 +201,9 @@ a:hover {
     color: #88C0D0;
 }
 
-.damage-stats {
-    /*text-align: center;*/
+.damage-stats,
+.game-menu-button {
+    font-size: 14px;
 }
 
 .damage-stats > li {
@@ -206,7 +211,7 @@ a:hover {
 }
 
 small {
-    color: #707070 !important;
+    color: #707070;
 }
 
 .farm-button {
@@ -216,4 +221,21 @@ small {
 
 .farm-button-active {
     color: #BF616A;
+}
+
+.game-menu-button-active {
+    color: #88C0D0 !important;
+}
+
+
+.equipment-container {
+    font-size: 14px;
+}
+
+.equipment-item-type-header {
+    display: block;
+}
+
+.equipment-item {
+    margin-bottom: 5px;
 }

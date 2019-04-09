@@ -1,11 +1,11 @@
 <template>
     <div class="row">
         <div class="col-md-12 text-center">
-            <h3>Hjol</h3>
+            <h3>Dungeons of Dredmore</h3>
 
             <div class="row">
                 <div class="col-md-12">
-                    The idle ARPG
+                    The idle ARPG that gets you hard
                 </div>
             </div>
             <p></p>
