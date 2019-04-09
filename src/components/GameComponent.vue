@@ -17,12 +17,6 @@
 
             <div class="row">
                 <div class="col-md-6">
-                    <p class="text-center attack-click">
-                        <img class="attack-click-image" @click="click" :src="monsterImage" alt="attack-click-image">
-                    </p>
-                </div>
-
-                <div class="col-md-6">
                     <div class="float-left">
                         <small>Stats</small>
                         <ul class="list-unstyled damage-stats">
@@ -43,6 +37,12 @@
                     </div>
 
                     <div class="clearfix"></div>
+                </div>
+
+                <div class="col-md-6">
+                    <p class="text-center attack-click">
+                        <img class="attack-click-image" @click="click" :src="monsterImage" alt="attack-click-image">
+                    </p>
                 </div>
             </div>
 

@@ -1,21 +1,17 @@
 <template>
     <div class="">
         <div class="row">
-            <div class="col-lg-2">
+            <!-- <div class="col-lg-2">
                 <equipment-component></equipment-component>
-            </div>
-            <div class="col-lg-8">
-                <game-component></game-component>
-            </div>
+            </div> -->
 
-            <div class="col-lg-2">
-                <equipment-component></equipment-component>
-            </div>
-        </div>
-
-        <div class="row">
             <div class="col-lg-8 offset-lg-2">
+                <game-component></game-component>
                 <tab-switcher-component></tab-switcher-component>
+            </div>
+
+            <div class="col-lg-2">
+                <equipment-component></equipment-component>
             </div>
         </div>
 

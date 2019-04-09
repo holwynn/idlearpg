@@ -9,7 +9,7 @@
 
 body {
     height: 2450px;
-    margin-top: 80px;
+    margin-top: 55px;
     font-family: "Fontin";
     background: #1e1e1e;
     color: #c8c8c8;
@@ -34,6 +34,7 @@ a:hover {
 
 .enemy-progress {
     height: 6px;
+    margin-bottom: 7px;
 }
 
 .game-saved {
@@ -47,8 +48,8 @@ a:hover {
 }
 
 .attack-click-image {
-    margin-top: -40px;
-    height: 150px;
+    /*margin-top: -40px;*/
+
 }
 
 .attack-click-image:hover {
@@ -169,6 +170,12 @@ a:hover {
     padding-top: 15px;
 }
 
+.area-name {
+    margin-top: 2px;
+    display: block;
+    margin-bottom: 5px;
+}
+
 .table th, .table td {
     border: none;
     padding: 13px;
@@ -238,4 +245,25 @@ small {
 
 .equipment-item {
     margin-bottom: 5px;
+}
+
+.monster-container {
+    /*border: 1px solid blue;*/
+}
+
+.monster-name,
+.monster-image {
+    display: inline-block;
+}
+
+.monster-name {
+    width: 70%;
+    margin-bottom: 5px;
+}
+.monster-image {
+    width: 30%;
+}
+
+.monster-type {
+
 }

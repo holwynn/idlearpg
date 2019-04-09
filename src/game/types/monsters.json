@@ -8,36 +8,36 @@
     },
     "common": {
         "goblin": {
-            "name": "Goblin",
-            "image": "goblin.png",
+            "name": "Small Bat",
+            "image": "bat-3.png",
             "hp": 54,
             "minlevel": 1,
             "gold": 12
         },
         "goblin_warrior": {
-            "name": "Goblin Acolyte",
-            "image": "goblin_warrior.png",
+            "name": "Small Bat",
+            "image": "bat-3.png",
             "hp": 62,
             "minlevel": 1,
             "gold": 18
         },
         "orc": {
-            "name": "Orc",
-            "image": "orc.png",
+            "name": "Small Bat",
+            "image": "bat-3.png",
             "hp": 90,
             "minlevel": 1,
             "gold": 24
         },
         "goblin_monk": {
-            "name": "Goblin Monk",
-            "image": "goblin_monk.png",
+            "name": "Small Bat",
+            "image": "bat-3.png",
             "hp": 96,
             "minlevel": 2,
             "gold": 41
         },
         "orc_warrior": {
-            "name": "Orc Warrior",
-            "image": "orc_warrior.png",
+            "name": "Small Bat",
+            "image": "bat-3.png",
             "hp": 96,
             "minlevel": 4,
             "gold": 41

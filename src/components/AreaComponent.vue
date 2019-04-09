@@ -3,34 +3,41 @@
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-7 text-center current-area">
-                    <span>{{ currentArea.act }}</span>
+                    <span>{{ currentArea.act }}</span> <br>
                     <!-- farm-button-active -->
-                    <p>
-                    <span @click="turnFarming()" v-bind:class="{ 'farm-button-active': farmActive }" v-if="currentArea.name != 'Gates of Hell'"class="farm-button">{{ farmText }} </span>
-                        <strong>{{ currentArea.name }}</strong>
-                        <small> ilvl {{ currentArea.level }}</small>
-                    </p>
+                    <strong class="area-name">{{ currentArea.name }}</strong>
+
+                    <span @click="turnFarming()" v-bind:class="{ 'farm-button-active': farmActive }" v-if="currentArea.name != 'Gates of Hell'" class="farm-button"> {{ farmText }} </span>
                     <p>{{ monstersDefeated }} / {{ currentArea.monstersAmount }}</p>
                 </div>
 
                 <div class="col-md-5">
-                    <p v-bind:class="{ 'text-fire': currentMonster.rarity == 'unique' }">{{ currentMonster.name }}</p>
-                    <span class="area-monster-health">HP: {{ Math.floor(currentMonster.hp) }}/{{ Math.floor(currentMonster.maxHp) }}</span>
-                    <div class="progress enemy-progress">
-                        <div
-                        class="progress-bar"
-                        role="progressbar"
-                        v-bind:class="{ 'bg-danger': progress <= 35, 'bg-warning': progress <= 75, 'bg-success': progress <= 100}"
-                        v-bind:style="{ width: progress + '%'}"
-                        v-bind:aria-valuenow="88"
-                        aria-valuemin="0"
-                        aria-valuemax="100">
+                    <div class="monster-container">
+                        <!-- <p v-bind:class="{ 'text-fire': currentMonster.rarity == 'unique' }">{{ currentMonster.name }}</p> -->
+                        <small>HP: {{ currentMonster.hp }}/{{ currentMonster.maxHp }}</small>
+                        <div class="progress enemy-progress">
+                            <div
+                                class="progress-bar bg-danger"
+                                role="progressbar"
+                                v-bind:style="{ width: progress + '%'}"
+                                v-bind:aria-valuenow="88"
+                                aria-valuemin="0"
+                                aria-valuemax="100">
+                            </div>
+                        </div>
+
+                        <div class="monster-name">
+                            <span class="monster-name">{{ currentMonster.name }}</span> <br>
+                            <small class="monster-type">Beast level 1</small>
+                        </div>
+                        <div class="monster-image">
+                            <img class="attack-click-image" :src="monsterImage" alt="attack-click-image">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </template>
 
 <script>
@@ -44,7 +51,7 @@
         data() {
             return {
                 farmActive: false,
-                farmText: 'farm'
+                farmText: 'farm this area'
         }
     },
     computed: {
@@ -53,6 +60,9 @@
         },
         currentMonster: function() {
             return this.$store.state.game.area.getCurrentMonster();
+        },
+        monsterImage() {
+            return '/assets/monsters/' + this.currentMonster.image;
         },
         monstersDefeated: function() {
             if (this.currentArea.getMonsters().length === this.currentArea.monstersAmount) {
@@ -89,7 +99,7 @@
             } else {
                 this.$store.state.game.disableFarming();
                 this.farmActive = false;
-                this.farmText = 'farm';
+                this.farmText = 'farm this area';
             }
         }
     }

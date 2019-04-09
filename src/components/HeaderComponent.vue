@@ -1,7 +1,7 @@
 <template>
     <div class="row">
         <div class="col-md-12 text-center">
-            <h3>Dungeons of Dredmore</h3>
+            <h3>Heroes of Nevereth</h3>
 
             <div class="row">
                 <div class="col-md-12">

@@ -74,7 +74,7 @@ export default class Game {
 
         this.inventory = [];
 
-        this.generateArea('');
+        this.generateArea('Gates of Hell');
     }
 
     earn(x) {
