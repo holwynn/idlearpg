@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <p class="text-center attack-click">
-                        <img class="attack-click-image" @click="click" src="../assets/sword.png" alt="attack-click-image">
+                        <img class="attack-click-image" @click="click" :src="monsterImage" alt="attack-click-image">
                     </p>
                 </div>
 
@@ -58,10 +58,15 @@ export default {
             game: this.$store.state.game
         }
     },
+    computed: {
+        monsterImage() {
+            return '/assets/monsters/' + this.game.area.getCurrentMonster().image;
+        }
+    },
     methods: {
         click() {
+            console.log(this.monsterImage);
             this.game.clickAttack();
-            // const element = document.querySelector('.attack-click-image').setAttribute();
         }
     }
 }

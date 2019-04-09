@@ -43,7 +43,8 @@ a:hover {
 }
 
 .attack-click-image {
-    height: 100px;
+    margin-top: -40px;
+    height: 150px;
 }
 
 .attack-click-image:hover {

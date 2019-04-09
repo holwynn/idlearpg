@@ -1,0 +1,19 @@
+{
+    "bases": {
+        "rusty_dagger": {
+            "type": "equipment",
+            "class": "dagger",
+            "name": "Rusty Daggerr",
+            "attributes": {
+                "physical_damage": 17,
+                "attacks_per_second": 0.25
+            },
+            "requirements": {
+                "level": 1
+            }
+        }
+    },
+    "uniques": {
+
+    }
+}

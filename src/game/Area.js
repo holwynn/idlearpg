@@ -9,22 +9,29 @@ for (const monster in m["common"]) {
 }
 
 export default class Area {
-    constructor(name, act, monstersAmount = 15, level = 1, uniques = []) {
-        this.name = name;
-        this.act = act;
-        this.level = level;
-        this.monstersAmount = monstersAmount;
-        this.uniques = uniques;
+    constructor(options) {
+        this.name = options.name;
+        this.act = options.act;
+        this.level = options.level ? options.level : 1;
+        this.monstersAmount = options.monsters ? options.monsters : 5;
+        this.uniques = options.uniques ? options.uniques : [];
 
         this.monsters = [];
     }
 
     generateMonsters() {
         const monstersInLevelRange = monsters.filter(m => { return m.minlevel <= this.level});
-
         for (let i = 1; i <= this.monstersAmount; i++) {
             let randomMob = monstersInLevelRange[Math.floor(Math.random() * monstersInLevelRange.length)];
-            this.monsters.push(new Monster(randomMob.name, 'normal', this.level, randomMob.hp, randomMob.gold));
+
+            this.monsters.push(new Monster({
+                type: randomMob.name,
+                rarity: 'normal',
+                level: this.level,
+                hp: randomMob.hp,
+                gold: randomMob.gold,
+                image: randomMob.image,
+            }));
         }
 
         if (this.uniques.length > 0) {

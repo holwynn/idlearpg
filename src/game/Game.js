@@ -1,5 +1,9 @@
 import Area from './Area';
+import Item from './Item';
+
 import areaNames from './types/areas.json'
+import axes from './types/axes.json';
+import daggers from './types/daggers.json';
 
 function generate_random_name() {
     let length = areaNames['prefixes'].length;
@@ -45,14 +49,30 @@ function find_next_area(currentArea, fallback = false) {
     return undefined;
 }
 
-// console.log(find_next_area('The Twilight Strand', true));
-
 export default class Game {
     constructor(money = 0, doneWithCampaign = false) {
         this.money = money;
         this.doneWithCampaign = doneWithCampaign;
         this.farming = false;
-        this.damage = 68;
+        this.damage = 14;
+
+        let startingWeapon = new Item(daggers['bases']['rusty_dagger']);
+
+        this.equipment = {
+            mainHand: startingWeapon,
+            offhand: undefined,
+            helmet: undefined,
+            bodyarmour: undefined,
+            gloves: undefined,
+            boots: undefined,
+            leftring: undefined,
+            rightring: undefined,
+            amulet: undefined
+        }
+
+        console.log(this.equipment);
+
+        this.inventory = [];
 
         this.generateArea('');
     }
@@ -63,16 +83,23 @@ export default class Game {
 
     generateArea(name) {
         if (this.doneWithCampaign) {
-            // return this.area = new Area(generate_random_name(), 5, 1);
+
         }
 
         if (this.farming) {
             let lastArea = this.area;
-            this.area = new Area(lastArea.name, lastArea.act, lastArea.monstersAmount, lastArea.level, lastArea.uniques);
+            this.area = new Area(lastArea);
         } else {
             let nextAreaData = find_next_area(name, true);
             let nextArea = areaNames[nextAreaData[1]];
-            this.area = new Area(nextAreaData[1], nextAreaData[0], nextArea.monsters, nextArea.level, nextArea.uniques);
+
+            this.area = new Area({
+                name: nextAreaData[1],
+                act: nextAreaData[0],
+                level: nextArea.level,
+                monsters: nextArea.monsters,
+                uniques: nextArea.uniques
+            })
         }
 
         this.area.generateMonsters();

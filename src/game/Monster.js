@@ -1,14 +1,15 @@
 export default class Monster {
-    constructor(type, rarity, level, hp, dropGold) {
-        this.type = type;
-        this.rarity = rarity;
-        this.level = level;
-        this.dropGold = dropGold;
+    constructor(options) {
+        this.type = options.type;
+        this.rarity = options.rarity;
+        this.level = options.level;
+        this.gold = options.gold;
+        this.image = options.image;
 
         if (this.level === 1) {
-            this.maxHp = hp;
+            this.maxHp = options.hp;
         } else {
-            this.maxHp = hp * (this.level * 1.25);
+            this.maxHp = options.hp * (this.level * 1.25);
         }
 
         this.hp = this.maxHp;
@@ -44,6 +45,6 @@ export default class Monster {
     }
 
     getGoldDrop() {
-        return Math.floor(this.dropGold) * (this.level * 1.18);
+        return Math.floor(this.gold) * (this.level * 1.18);
     }
 }

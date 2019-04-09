@@ -7,28 +7,39 @@
         }
     },
     "common": {
-        "bat": {
-            "name": "Bat",
+        "goblin": {
+            "name": "Goblin",
+            "image": "goblin.png",
             "hp": 54,
             "minlevel": 1,
             "gold": 12
         },
-        "zombie": {
-            "name": "Zombie",
-            "hp": 70,
+        "goblin_warrior": {
+            "name": "Goblin Acolyte",
+            "image": "goblin_warrior.png",
+            "hp": 62,
             "minlevel": 1,
             "gold": 18
         },
-        "crab": {
-            "name": "Crab",
+        "orc": {
+            "name": "Orc",
+            "image": "orc.png",
             "hp": 90,
             "minlevel": 1,
-            "gold": 13
+            "gold": 24
         },
-        "seawitch": {
-            "name": "Sea Witch",
-            "hp": 34,
-            "minlevel": 1,
+        "goblin_monk": {
+            "name": "Goblin Monk",
+            "image": "goblin_monk.png",
+            "hp": 96,
+            "minlevel": 2,
+            "gold": 41
+        },
+        "orc_warrior": {
+            "name": "Orc Warrior",
+            "image": "orc_warrior.png",
+            "hp": 96,
+            "minlevel": 4,
             "gold": 41
         }
     }

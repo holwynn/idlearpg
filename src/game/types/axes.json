@@ -1,0 +1,29 @@
+{
+    "bases": {
+        "cleaver": {
+            "type": "equipment",
+            "class": "axe",
+            "name": "Cleaver",
+            "attributes": {
+                "physical_damage": 17,
+                "attacks_per_second": 0.25
+            },
+            "requirements": {
+                "level": 1
+            }
+        },
+        "Stone Axe": {
+            "name": "Stone Axe",
+            "attributes": {
+                "physical_damage": 41,
+                "attacks_per_second": 0
+            },
+            "requirements": {
+                "level": 2
+            }
+        }
+    },
+    "uniques": {
+
+    }
+}
