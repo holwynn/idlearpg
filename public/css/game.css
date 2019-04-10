@@ -37,6 +37,10 @@ a:hover {
     margin-bottom: 7px;
 }
 
+.enemy-progress > * {
+    transition: none !important;
+}
+
 .game-saved {
     cursor: default;
     color: #555;
@@ -235,20 +239,39 @@ small {
 }
 
 
+.map-component,
 .equipment-container {
     font-size: 14px;
 }
 
+.act {
+    margin-bottom: 10px;
+}
+
+.map-area,
 .equipment-item-type-header {
     display: block;
 }
-
+.map-act,
 .equipment-item {
     margin-bottom: 5px;
 }
 
+.map-area:hover {
+    color: #efeef1;
+}
+
+.map-current {
+    color: #efeef1;
+}
+
 .monster-container {
-    /*border: 1px solid blue;*/
+    height: 120px;
+}
+
+.monster-hp {
+    display: block;
+    margin-bottom: 5px;
 }
 
 .monster-name,

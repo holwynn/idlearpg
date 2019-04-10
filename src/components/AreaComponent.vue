@@ -14,7 +14,8 @@
                 <div class="col-md-5">
                     <div class="monster-container">
                         <!-- <p v-bind:class="{ 'text-fire': currentMonster.rarity == 'unique' }">{{ currentMonster.name }}</p> -->
-                        <small>HP: {{ currentMonster.hp }}/{{ currentMonster.maxHp }}</small>
+                        <small class="monster-hp">HP: {{ currentMonster.hp }}/{{ currentMonster.maxHp }}</small>
+
                         <div class="progress enemy-progress">
                             <div
                                 class="progress-bar bg-danger"
@@ -28,7 +29,7 @@
 
                         <div class="monster-name">
                             <span class="monster-name">{{ currentMonster.name }}</span> <br>
-                            <small class="monster-type">Beast level 1</small>
+                            <small class="monster-type">Beast level {{ currentMonster.level }}</small>
                         </div>
                         <div class="monster-image">
                             <img class="attack-click-image" :src="monsterImage" alt="attack-click-image">

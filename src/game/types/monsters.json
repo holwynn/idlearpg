@@ -7,23 +7,23 @@
         }
     },
     "common": {
-        "goblin": {
+        "small_bat": {
             "name": "Small Bat",
-            "image": "bat-3.png",
+            "image": "bat.png",
             "hp": 54,
             "minlevel": 1,
             "gold": 12
         },
-        "goblin_warrior": {
-            "name": "Small Bat",
-            "image": "bat-3.png",
+        "rat": {
+            "name": "Rat",
+            "image": "rat.png",
             "hp": 62,
             "minlevel": 1,
             "gold": 18
         },
-        "orc": {
-            "name": "Small Bat",
-            "image": "bat-3.png",
+        "spider": {
+            "name": "Spider",
+            "image": "spider.png",
             "hp": 90,
             "minlevel": 1,
             "gold": 24

@@ -1,11 +1,11 @@
 <template>
-    <div class="">
+    <div class="container">
         <div class="row">
-            <!-- <div class="col-lg-2">
-                <equipment-component></equipment-component>
-            </div> -->
+            <div class="col-lg-2">
+                <map-component></map-component>
+            </div>
 
-            <div class="col-lg-8 offset-lg-2">
+            <div class="col-lg-8">
                 <game-component></game-component>
                 <tab-switcher-component></tab-switcher-component>
             </div>
@@ -31,6 +31,7 @@ import ShopComponent from './ShopComponent';
 import StashComponent from './StashComponent';
 import DropsComponent from './DropsComponent';
 import TabSwitcherComponent from './TabSwitcherComponent';
+import MapComponent from './MapComponent';
 
 export default {
     name: 'MainComponent',
@@ -44,7 +45,8 @@ export default {
         ShopComponent,
         StashComponent,
         DropsComponent,
-        TabSwitcherComponent
+        TabSwitcherComponent,
+        MapComponent
     },
     data() {
         return {

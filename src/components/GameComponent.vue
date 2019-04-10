@@ -16,7 +16,7 @@
             <area-component></area-component>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="float-left">
                         <small>Stats</small>
                         <ul class="list-unstyled damage-stats">
@@ -30,8 +30,8 @@
                     <div class="float-right">
                         <ul class="list-unstyled game-menu-button">
                             <li class="list"><small class="game-menu-button-active">Equipment</small></li>
-                            <li class="list"><small>Inventory</small></li>
-                            <li class="list"><small>Town</small></li>
+                            <li class="list"><small>Inventory</small></li> br
+                            <li class="list"><small class="game-menu-button-active">Map</small></li>
                             <li class="list"><small class="game-menu-button-active">Stash</small></li>
                         </ul>
                     </div>
@@ -39,9 +39,9 @@
                     <div class="clearfix"></div>
                 </div>
 
-                <div class="col-md-6">
-                    <p class="text-center attack-click">
-                        <img class="attack-click-image" @click="click" :src="monsterImage" alt="attack-click-image">
+                <div class="col-md-5">
+                    <p class="attack-click text-center">
+                        <img class="attack-click-image" @click="click" src="/assets/sword.png">
                     </p>
                 </div>
             </div>
