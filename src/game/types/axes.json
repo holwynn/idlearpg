@@ -5,8 +5,8 @@
             "class": "axe",
             "name": "Cleaver",
             "attributes": {
-                "physical_damage": 17,
-                "attacks_per_second": 0.25
+                "physical_damage": 10,
+                "attacks_per_second": 0.1
             },
             "requirements": {
                 "level": 1

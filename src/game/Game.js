@@ -33,6 +33,7 @@ export default class Game {
         this.damage = this.calculateDamage();
         this.inventory = [];
         this.generateArea();
+        this.setGameLoop();
     }
 
     earn(x) {
@@ -79,7 +80,20 @@ export default class Game {
     }
 
     clickAttack() {
-        this.area.getCurrentMonster().damage(this.damage);
+        this.area.getCurrentMonster().damage(this.calculateDamage());
+
+        if (this.area.getCurrentMonster().isDead === true) {
+            let monster = this.area.killCurrentMonster();
+            this.money += monster.getGoldDrop();
+        }
+
+        if (this.area.monsters.length === 0) {
+            this.generateArea(this.area.name);
+        }
+    }
+
+    dpsAttack() {
+        this.area.getCurrentMonster().damage(this.calculateDamage() * this.stats["attacks_per_second"]);
 
         if (this.area.getCurrentMonster().isDead === true) {
             let monster = this.area.killCurrentMonster();
@@ -141,8 +155,11 @@ export default class Game {
         return this.stats["fire_damage"] * (1 + this.stats["increased_fire_damage"]) + (1 + this.stats["increased_elemental_damage"]);
     }
 
-
     calculateDamage() {
         return this.getPhysicalDamage() + this.getLightningDamage() + this.getColdDamage() + this.getFireDamage();
+    }
+
+    setGameLoop() {
+
     }
 }

@@ -6,6 +6,7 @@ import Equipment from './game/Equipment';
 
 import { create_item_from_base } from './game/itemutils';
 
+// create_item_from_base('daggers', 'frost_dagger')
 const startingEquipment = new Equipment({
     mainhand: create_item_from_base('axes', 'cleaver'),
     offhand: undefined,

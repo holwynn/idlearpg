@@ -22,31 +22,31 @@
                         <ul class="list-unstyled damage-stats">
                             <li v-if="this.stats['fire_damage'] > 0" class="list">
                                 <span class="text-fire">Fire damage: </span>
-                                {{ this.game.getFireDamage() }}
+                                {{ (this.game.getFireDamage()).toFixed(0) }}
                             </li>
                             <li v-if="this.stats['cold_damage'] > 0" class="list">
                                 <span class="text-cold">Cold damage: </span>
-                                {{ this.game.getColdDamage() }}
+                                {{ (this.game.getColdDamage()).toFixed(0) }}
                             </li>
                             <li v-if="this.stats['lighting_damage'] > 0" class="list">
                                 <span class="text-lightning">Lightning damage: </span>
-                                {{ this.game.getLightingDamage() }}
+                                {{ (this.game.getLightingDamage()).toFixed(0) }}
                             </li>
                             <li v-if="this.stats['physical_damage'] > 0" class="list">
                                 <span class="text-light">Physical damage: </span>
-                                {{ this.stats["physical_damage"] }}
+                                {{ (this.stats["physical_damage"].toFixed(0)) }}
                             </li>
                             <li class="list">
                                 <span class="text-light">Click damage: </span>
-                                {{ this.game.calculateDamage() }}
+                                {{ (this.game.calculateDamage()).toFixed(0) }}
                             </li>
                             <li class="list">
                                 <span class="text-light">Attacks per second: </span>
-                                {{ this.stats["attacks_per_second"] }}
+                                {{ (this.stats["attacks_per_second"]).toFixed(1) }}
                             </li>
                             <li class="list">
                                 <span class="text-light">DPS: </span>
-                                {{ this.stats["physical_damage"] * this.stats["attacks_per_second"] }}
+                                {{ dps }}
                             </li>
                         </ul>
                     </div>
@@ -71,7 +71,7 @@
             </div>
 
             <!-- Drrops -->
-            <drops-component></drops-component>
+            <!-- <drops-component></drops-component> -->
         </div>
     </div>
 </template>
@@ -92,6 +92,9 @@ export default {
         },
         stats() {
             return this.game.stats;
+        },
+        dps() {
+            return (this.game.calculateDamage() * this.stats["attacks_per_second"]).toFixed(2)
         },
         monsterImage() {
             return '/assets/monsters/' + this.game.area.getCurrentMonster().image;

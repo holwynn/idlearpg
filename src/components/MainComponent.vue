@@ -15,6 +15,12 @@
             </div>
         </div>
 
+        <div class="row footer">
+            <div class="col-md-12">
+                <p><small>"The ARPG that gets you hard" - Erin Hannon</small></p>
+            </div>
+        </div>
+
         <!-- <div class="row">
             <div class="col-md-12">
                 <tab-switcher-component></tab-switcher-component>

@@ -14,7 +14,7 @@
                 <div class="col-md-5">
                     <div class="monster-container">
                         <!-- <p v-bind:class="{ 'text-fire': currentMonster.rarity == 'unique' }">{{ currentMonster.name }}</p> -->
-                        <small class="monster-hp">HP: {{ currentMonster.hp }}/{{ currentMonster.maxHp }}</small>
+                        <small class="monster-hp">HP: {{ currentMonster.hp.toFixed(0) }}/{{ currentMonster.maxHp.toFixed(0) }}</small>
 
                         <div class="progress enemy-progress">
                             <div

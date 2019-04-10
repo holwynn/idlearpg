@@ -19,7 +19,7 @@
             "name": "Frost Dagger",
             "image": "dagger.png",
             "attributes": {
-                "cold_damage": 1,
+                "cold_damage": 5,
                 "physical_damage": 0,
                 "attacks_per_second": 0.25
             },
