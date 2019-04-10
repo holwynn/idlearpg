@@ -1,5 +1,6 @@
 import m from './types/monsters.json';
 import Monster from './Monster';
+import { roll } from './utils.js';
 
 // this seems unnecessary
 let monsters = [];
@@ -25,7 +26,8 @@ export default class Area {
             let randomMob = monstersInLevelRange[Math.floor(Math.random() * monstersInLevelRange.length)];
 
             this.monsters.push(new Monster({
-                type: randomMob.name,
+                type: randomMob.type,
+                name: randomMob.name,
                 rarity: 'normal',
                 level: this.level,
                 hp: randomMob.hp,
@@ -36,9 +38,17 @@ export default class Area {
 
         if (this.uniques.length > 0) {
             for (const unique of this.uniques) {
-                let u = m['uniques'][unique];
-                console.log(u);
-                this.monsters.push(new Monster(u.name, 'unique', this.level, u.hp, u.gold));
+                let uniqueData = m['uniques'][unique];
+
+                this.monsters.push(new Monster({
+                    type: uniqueData.type,
+                    name: uniqueData.name,
+                    rarity: 'unique',
+                    level: this.level + roll(3),
+                    hp: uniqueData.hp,
+                    gold: uniqueData.gold,
+                    image: uniqueData.image
+                }));
             }
         }
     }

@@ -5,54 +5,81 @@
                 <div class="col-sm-12">
                     <p class="text-center text-lightning">Equipment</p>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Main Hand</small>
-                        <small class="item-legendary">Cleaver</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Main Hand</small>
+                        <small class="item-normal">{{ equipment.mainhand.name }}</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Off Hand</small>
-                        <small class="item-legendary">Queen's Shield</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Off Hand</small>
+                        <small v-if="equipment.offhand != undefined">
+                            {{ equipment.offhand.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Helmet</small>
-                        <small class="item-rare">Royal Crown</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Helmet</small>
+                        <small v-if="equipment.helmet != undefined">
+                            {{ equipment.helmet.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Body Armour</small>
-                        <small class="item-rare">Dragonite Chestplate</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Body Armour</small>
+                        <small v-if="equipment.bodyarmour != undefined">
+                            {{ equipment.bodyarmour.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Belt</small>
-                        <small class="item-rare">Vanguard's Belt</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Belt</small>
+                        <small v-if="equipment.belt != undefined">
+                            {{ equipment.belt.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Gloves</small>
-                        <small class="item-legendary">Hjol's Gloves</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Gloves</small>
+                        <small v-if="equipment.gloves != undefined">
+                            {{ equipment.gloves.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Boots</small>
-                        <small class="item-magic">Potato Sack</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Boots</small>
+                        <small v-if="equipment.boots != undefined">
+                            {{ equipment.boots.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Amulet</small>
-                        <small class="item-magic">Rosemary</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Amulet</small>
+                        <small v-if="equipment.amulet != undefined">
+                            {{ equipment.amulet.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Ring</small>
-                        <small class="item-rare">Wedding Ring</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Left Ring</small>
+                        <small v-if="equipment.leftring != undefined">
+                            {{ equipment.leftring.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
 
-                    <div class="equipment-item">
-                        <small class="equipment-item-type-header">Ring</small>
-                        <small class="item-rare">Ruby Ring</small>
+                    <div class="equipment">
+                        <small class="equipment-type">Right Ring</small>
+                        <small v-if="equipment.rightring != undefined">
+                            {{ equipment.rightring.name }}
+                        </small>
+                        <small v-else class="item-normal">none</small>
                     </div>
                 </div>
             </div>
@@ -63,15 +90,18 @@
 <script>
 export default {
     name: 'EquipmentComponent',
-    props: {
-        msg: String
-    },
     computed: {
+        equipment() {
+            return this.$store.state.game.equipment;
+        },
         damagePerClick() {
-            return this.$store.state.game.damage
+            return this.$store.state.game.damage;
         }
     },
     methods: {
+        rarity(rarity) {
+            return 'item-' + rarity;
+        }
     }
 }
 </script>

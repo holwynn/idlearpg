@@ -7,40 +7,40 @@
     ],
     "campaign": {
         "Act 1": [
-            "Gates of Hell",
-            "The Molten Passage",
-            "Lava Lake",
-            "The Desert",
-            "The Sepulchre"
+            "The Sewers",
+            "The Cemetery",
+            "Royal Burials",
+            "Tomb of Mayor West",
+            "Inner Tomb",
+            "The Hidden Passage"
         ],
         "Act 2": [
-            "The Cemetery",
             "Forbidden Forest",
             "Dark Mantra"
         ]
     },
-    "Gates of Hell": {
+    "The Sewers": {
         "monsters": 5,
         "level": 1
     },
-    "The Molten Passage": {
+    "The Cemetery": {
         "monsters": 5,
         "level": 2
     },
-    "Lava Lake": {
+    "Royal Burials": {
         "monsters": 5,
         "level": 3
     },
-    "The Desert": {
+    "Tomb of Mayor West": {
         "monsters": 5,
         "level": 4
     },
-    "The Sepulchre": {
+    "Inner Tomb": {
         "monsters": 5,
         "level": 5,
-        "uniques": ["vaelastrasz"]
+        "uniques": ["the_necromancer"]
     },
-    "The Cemetery": {
+    "The Hidden Passage": {
         "monsters": 5,
         "level": 6
     }

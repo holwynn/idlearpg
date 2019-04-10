@@ -58,9 +58,6 @@ import DropsComponent from './DropsComponent';
 
 export default {
     name: 'GameComponent',
-    props: {
-        msg: String
-    },
     components: {
           AreaComponent,
           DropsComponent
@@ -77,7 +74,6 @@ export default {
     },
     methods: {
         click() {
-            console.log(this.monsterImage);
             this.game.clickAttack();
         }
     }

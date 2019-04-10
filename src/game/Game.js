@@ -32,7 +32,8 @@ function find_next_area(currentArea, fallback = false) {
         let nextActNumber = parseInt(act.substring(act.length - 1)) + 1;
         nextActId = "Act " + nextActNumber;
         let nextAct = areaNames.campaign[nextActId] != undefined;
-        console.log(nextAct);
+
+        // console.log(nextAct);
 
         if (index === length && nextAct) {
             nextAct = true;
@@ -54,12 +55,13 @@ export default class Game {
         this.money = money;
         this.doneWithCampaign = doneWithCampaign;
         this.farming = false;
-        this.damage = 14;
+        this.damage = 340;
 
         let startingWeapon = new Item(daggers['bases']['rusty_dagger']);
+        // startingWeapon.type = 'rare';
 
         this.equipment = {
-            mainHand: startingWeapon,
+            mainhand: startingWeapon,
             offhand: undefined,
             helmet: undefined,
             bodyarmour: undefined,
@@ -70,7 +72,7 @@ export default class Game {
             amulet: undefined
         }
 
-        console.log(this.equipment);
+        // console.log(this.equipment.mainHand.type);
 
         this.inventory = [];
 
@@ -82,13 +84,17 @@ export default class Game {
     }
 
     generateArea(name) {
-        if (this.doneWithCampaign) {
-
-        }
-
         if (this.farming) {
             let lastArea = this.area;
-            this.area = new Area(lastArea);
+            console.log(lastArea.name);
+
+            this.area = new Area({
+                name: lastArea.name,
+                act: lastArea.act,
+                level: lastArea.level,
+                uniques: lastArea.uniques
+            });
+
         } else {
             let nextAreaData = find_next_area(name, true);
             let nextArea = areaNames[nextAreaData[1]];

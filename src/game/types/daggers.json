@@ -3,7 +3,7 @@
         "rusty_dagger": {
             "type": "equipment",
             "class": "dagger",
-            "name": "Rusty Daggerr",
+            "name": "Rusty Dagger",
             "attributes": {
                 "physical_damage": 17,
                 "attacks_per_second": 0.25

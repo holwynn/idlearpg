@@ -64,6 +64,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.item-normal {
+    color: #efeef1 !important;
+}
+
 .item-magic {
     color: #5E81AC !important;
 }
@@ -249,11 +253,11 @@ small {
 }
 
 .map-area,
-.equipment-item-type-header {
+.equipment-type {
     display: block;
 }
 .map-act,
-.equipment-item {
+.equipment {
     margin-bottom: 5px;
 }
 
