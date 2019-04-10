@@ -6,6 +6,7 @@ export default class Item {
 
         // item attributes
         this.name = options.name;
+        this.image = options.image;
         this.attributes = options.attributes;
 
         // item modifiers

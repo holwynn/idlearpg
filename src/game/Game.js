@@ -1,82 +1,38 @@
 import Area from './Area';
-import Item from './Item';
 
 import areaNames from './types/areas.json'
-import axes from './types/axes.json';
-import daggers from './types/daggers.json';
 
-function generate_random_name() {
-    let length = areaNames['prefixes'].length;
-    const prefix = areaNames['prefixes'][Math.floor(Math.random() * length)];
-    length = areaNames['suffixes'].length;
-    const suffix = areaNames['suffixes'][Math.floor(Math.random() * length)];
-    return prefix + ' ' + suffix;
-}
-
-function find_next_area(currentArea, fallback = false) {
-    let nextAct = false;
-    let nextActId = false;
-
-    for (const act in areaNames.campaign) {
-        if (nextAct) {
-            return [act, areaNames.campaign[act][0]];
-        }
-
-        let length = areaNames.campaign[act].length - 1;
-        let index = areaNames.campaign[act].indexOf(currentArea);
-
-        if (index === -1) {
-            continue;
-        }
-
-        let nextActNumber = parseInt(act.substring(act.length - 1)) + 1;
-        nextActId = "Act " + nextActNumber;
-        let nextAct = areaNames.campaign[nextActId] != undefined;
-
-        // console.log(nextAct);
-
-        if (index === length && nextAct) {
-            nextAct = true;
-            continue;
-        }
-
-        return [act, areaNames.campaign[act][index+1]];
-    }
-
-    if (fallback) {
-        return ['Act 1', areaNames.campaign['Act 1'][0]];
-    }
-
-    return undefined;
-}
+import { generate_random_name, find_next_area } from './areautils';
 
 export default class Game {
-    constructor(money = 0, doneWithCampaign = false) {
-        this.money = money;
-        this.doneWithCampaign = doneWithCampaign;
+    constructor(options) {
+        this.money = options.money;
+        this.doneWithCampaign = options.doneWithCampaign;
         this.farming = false;
-        this.damage = 340;
+        this.equipment = options.equipment;
+        this.stats = [];
 
-        let startingWeapon = new Item(daggers['bases']['rusty_dagger']);
-        // startingWeapon.type = 'rare';
+        const attributes = [
+            "physical_damage",
+            "fire_damage",
+            "cold_damage",
+            "lightning_damage",
+            "attacks_per_second",
+            "increased_physical_damage",
+            "increased_fire_damage",
+            "increased_cold_damage",
+            "increased_lightning_damage",
+            "increased_elemental_damage"
+        ];
 
-        this.equipment = {
-            mainhand: startingWeapon,
-            offhand: undefined,
-            helmet: undefined,
-            bodyarmour: undefined,
-            gloves: undefined,
-            boots: undefined,
-            leftring: undefined,
-            rightring: undefined,
-            amulet: undefined
+        for (const attribute of attributes) {
+            this.stats[attribute] = 0;
         }
 
-        // console.log(this.equipment.mainHand.type);
-
+        this.cacheStats();
+        this.damage = this.calculateDamage();
         this.inventory = [];
-
-        this.generateArea('Gates of Hell');
+        this.generateArea();
     }
 
     earn(x) {
@@ -86,7 +42,6 @@ export default class Game {
     generateArea(name) {
         if (this.farming) {
             let lastArea = this.area;
-            console.log(lastArea.name);
 
             this.area = new Area({
                 name: lastArea.name,
@@ -134,5 +89,60 @@ export default class Game {
         if (this.area.monsters.length === 0) {
             this.generateArea(this.area.name);
         }
+    }
+
+    getCampaign() {
+        return areaNames["campaign"];
+    }
+
+    getEquipment() {
+        return this.equipment;
+    }
+
+    cacheStats() {
+        this.equipment.cacheAttributes();
+
+        for(const attribute in this.equipment.cachedAttributes) {
+            this.stats[attribute] += this.equipment.cachedAttributes[attribute];
+        }
+
+        return this.stats;
+    }
+
+    getPhysicalDamage() {
+        if (this.stats["physical_damage"] === 0) {
+            return 0;
+        }
+
+        return this.stats["physical_damage"] * (1 + this.stats["increased_physical_damage"]);
+    }
+
+    getLightningDamage() {
+        if (this.stats["lightning_damage"] === 0) {
+            return 0;
+        }
+
+        return this.stats["lightning_damage"] * (1 + this.stats["increased_lightning_damage"]) + (1 + this.stats["increased_elemental_damage"]);
+    }
+
+    getColdDamage() {
+        if (this.stats["cold_damage"] === 0) {
+            return 0;
+        }
+
+        return this.stats["cold_damage"] * (1 + this.stats["increased_cold_damage"]) + (1 + this.stats["increased_elemental_damage"]);
+    }
+
+    getFireDamage() {
+        if (this.stats["fire_damage"] === 0) {
+            return 0;
+        }
+
+        return this.stats["fire_damage"] * (1 + this.stats["increased_fire_damage"]) + (1 + this.stats["increased_elemental_damage"]);
+    }
+
+
+    calculateDamage() {
+        return this.getPhysicalDamage() + this.getLightningDamage() + this.getColdDamage() + this.getFireDamage();
     }
 }

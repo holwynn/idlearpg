@@ -20,17 +20,41 @@
                     <div class="float-left">
                         <small>Stats</small>
                         <ul class="list-unstyled damage-stats">
-                            <li class="list"><span class="text-fire">Fire: </span>33.4k</li>
-                            <li class="list"><span class="text-cold">Cold: </span>194</li>
-                            <li class="list"><span class="text-lightning">Lightning: </span>112</li>
-                            <li class="list"><span class="text-light">Physical: </span>182k</li>
+                            <li v-if="this.stats['fire_damage'] > 0" class="list">
+                                <span class="text-fire">Fire damage: </span>
+                                {{ this.game.getFireDamage() }}
+                            </li>
+                            <li v-if="this.stats['cold_damage'] > 0" class="list">
+                                <span class="text-cold">Cold damage: </span>
+                                {{ this.game.getColdDamage() }}
+                            </li>
+                            <li v-if="this.stats['lighting_damage'] > 0" class="list">
+                                <span class="text-lightning">Lightning damage: </span>
+                                {{ this.game.getLightingDamage() }}
+                            </li>
+                            <li v-if="this.stats['physical_damage'] > 0" class="list">
+                                <span class="text-light">Physical damage: </span>
+                                {{ this.stats["physical_damage"] }}
+                            </li>
+                            <li class="list">
+                                <span class="text-light">Click damage: </span>
+                                {{ this.game.calculateDamage() }}
+                            </li>
+                            <li class="list">
+                                <span class="text-light">Attacks per second: </span>
+                                {{ this.stats["attacks_per_second"] }}
+                            </li>
+                            <li class="list">
+                                <span class="text-light">DPS: </span>
+                                {{ this.stats["physical_damage"] * this.stats["attacks_per_second"] }}
+                            </li>
                         </ul>
                     </div>
 
                     <div class="float-right">
                         <ul class="list-unstyled game-menu-button">
                             <li class="list"><small class="game-menu-button-active">Equipment</small></li>
-                            <li class="list"><small>Inventory</small></li> br
+                            <li class="list"><small>Inventory</small></li>
                             <li class="list"><small class="game-menu-button-active">Map</small></li>
                             <li class="list"><small class="game-menu-button-active">Stash</small></li>
                         </ul>
@@ -62,12 +86,13 @@ export default {
           AreaComponent,
           DropsComponent
     },
-    data() {
-        return {
-            game: this.$store.state.game
-        }
-    },
     computed: {
+        game() {
+            return this.$store.state.game
+        },
+        stats() {
+            return this.game.stats;
+        },
         monsterImage() {
             return '/assets/monsters/' + this.game.area.getCurrentMonster().image;
         }

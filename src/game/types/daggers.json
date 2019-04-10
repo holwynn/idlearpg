@@ -4,8 +4,23 @@
             "type": "equipment",
             "class": "dagger",
             "name": "Rusty Dagger",
+            "image": "dagger.png",
             "attributes": {
-                "physical_damage": 17,
+                "physical_damage": 4,
+                "attacks_per_second": 0.25
+            },
+            "requirements": {
+                "level": 1
+            }
+        },
+        "frost_dagger": {
+            "type": "equipment",
+            "class": "dagger",
+            "name": "Frost Dagger",
+            "image": "dagger.png",
+            "attributes": {
+                "cold_damage": 1,
+                "physical_damage": 0,
                 "attacks_per_second": 0.25
             },
             "requirements": {

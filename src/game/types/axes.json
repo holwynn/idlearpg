@@ -13,6 +13,8 @@
             }
         },
         "Stone Axe": {
+            "type": "equipment",
+            "class": "axe",
             "name": "Stone Axe",
             "attributes": {
                 "physical_damage": 41,

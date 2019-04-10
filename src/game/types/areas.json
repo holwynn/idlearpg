@@ -15,8 +15,8 @@
             "The Hidden Passage"
         ],
         "Act 2": [
-            "Forbidden Forest",
-            "Dark Mantra"
+            "Elwynn West",
+            "Southern Forest"
         ]
     },
     "The Sewers": {
@@ -29,19 +29,27 @@
     },
     "Royal Burials": {
         "monsters": 5,
-        "level": 3
+        "level": 4
     },
     "Tomb of Mayor West": {
         "monsters": 5,
-        "level": 4
+        "level": 5
     },
     "Inner Tomb": {
         "monsters": 5,
-        "level": 5,
+        "level": 7,
         "uniques": ["the_necromancer"]
     },
     "The Hidden Passage": {
         "monsters": 5,
-        "level": 6
+        "level": 9
+    },
+    "Elwynn West": {
+        "monsters": 5,
+        "level": 10
+    },
+    "Southern Forest": {
+        "monsters": 5,
+        "level": 12
     }
 }
