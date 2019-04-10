@@ -51,14 +51,14 @@
                         </ul>
                     </div>
 
-                    <div class="float-right">
+                    <!-- <div class="float-right">
                         <ul class="list-unstyled game-menu-button">
                             <li class="list"><small class="game-menu-button-active">Equipment</small></li>
                             <li class="list"><small>Inventory</small></li>
                             <li class="list"><small class="game-menu-button-active">Map</small></li>
                             <li class="list"><small class="game-menu-button-active">Stash</small></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <div class="clearfix"></div>
                 </div>

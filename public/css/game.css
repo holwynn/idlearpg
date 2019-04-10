@@ -68,18 +68,22 @@ a:hover {
     color: #efeef1 !important;
 }
 
+.text-magic,
 .item-magic {
     color: #5E81AC !important;
 }
 
+.text-rare,
 .item-rare {
     color: #EBCB8B !important;
 }
 
+.text-unique,
 .item-unique {
     color: #BF616A !important;
 }
 
+.text-legendary,
 .item-legendary {
     color: #BF616A !important;
 }
@@ -217,6 +221,11 @@ a:hover {
     color: #88C0D0;
 }
 
+.text-poison,
+.text-success {
+    color: ##A3BE8C !important;
+}
+
 .damage-stats,
 .game-menu-button {
     font-size: 14px;
@@ -226,6 +235,7 @@ a:hover {
     margin-bottom: 4px;
 }
 
+.text-muted,
 small {
     color: #707070;
 }
@@ -294,4 +304,48 @@ small {
 
 .monster-type {
 
+}
+
+.inventory-slot {
+    height: 32px;
+    width: 32px;
+    background-image: url(/assets/misc/inventoryslot32.png);
+    display: inline-block;
+    margin-left: 2px;
+    margin-bottom: 2px;
+}
+
+.inventory-item {
+    padding-top: 6px;
+    padding-left: 6px;
+}
+
+.item-tooltip {
+    font-size: 12px;
+}
+
+.tippy-tooltip.honeybee-theme {
+  /* Your styling here. Example: */
+  background-color: #1a1a1a;
+  border: 1px solid #efeef1;
+  text-align: left;
+  /*width: 200px;*/
+}
+
+.item-tooltip-name,
+.item-tooltip-stat {
+    display: block;
+}
+
+.tooltip-options {
+    margin-top: 10px;
+    border-top: 1px solid #efeef1;
+}
+
+.item-tooltip-options {
+    margin-right: 5px;
+}
+
+.item-tooltip-gold {
+    margin-top: 10px;
 }

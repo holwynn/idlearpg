@@ -5136,6 +5136,11 @@ pkg-dir@^3.0.0:
   dependencies:
     find-up "^3.0.0"
 
+popper.js@^1.14.3:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.15.0.tgz#5560b99bbad7647e9faa475c6b8056621f5a4ff2"
+  integrity sha512-w010cY1oCUmI+9KwwlWki+r5jxKfTFDVoadl7MSrIujHU5MJ5OR6HTDj6Xo8aoR/QsA56x8jKjA59qGH4ELtrA==
+
 portfinder@^1.0.20, portfinder@^1.0.9:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"
@@ -6592,6 +6597,13 @@ timsort@^0.3.0:
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
 
+tippy.js@^2.6.*:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/tippy.js/-/tippy.js-2.6.0.tgz#5493cd478322ce75c08306e67a0107aa609a39c9"
+  integrity sha512-hBcy6UXK3epiFwpkycy7Pn1SSLofUmawpPnlYg5ginbXMc/3EX2ivjzHfjvr/WPEpUg71/7ssiovhxDtCWvL2A==
+  dependencies:
+    popper.js "^1.14.3"
+
 to-arraybuffer@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/to-arraybuffer/-/to-arraybuffer-1.0.1.tgz#7d229b1fcc637e466ca081180836a7aabff83f43"
@@ -6952,6 +6964,14 @@ vue-template-es2015-compiler@^1.9.0:
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz#1ee3bc9a16ecbf5118be334bb15f9c46f82f5825"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
+
+vue-tippy@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/vue-tippy/-/vue-tippy-2.1.2.tgz#570a267b4bd7f13356e4fb46b509a540aac68930"
+  integrity sha512-2wDMqPtJG+fLryerYyeb2PMDfWXgdDIdcIrHjtSiSLAsNWdfMguUz+PJJoaHAWU7kEraxbCkcBl/dVoq0Q62cg==
+  dependencies:
+    popper.js "^1.14.3"
+    tippy.js "^2.6.*"
 
 vue@^2.6.6:
   version "2.6.10"
