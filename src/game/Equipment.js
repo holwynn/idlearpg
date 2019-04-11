@@ -1,36 +1,30 @@
-export default class Equipment {
-    constructor(options) {
-        this.types = ['mainhand', 'offhand', 'helmet', 'bodyarmour', 'belt',
-                     'gloves', 'boots', 'amulet', 'leftring', 'rightring'];
-        this.items = [];
+import equipmentTypes from './types/equipment.json';
 
-        for (const type of this.types) {
+class Equipment {
+    constructor(options) {
+        this.slots = [];
+
+        for (const type of equipmentTypes) {
             this.equip(options[type]);
         }
     }
 
     cacheAttributes() {
-        let attr = [];
-        for (const type of this.types) {
-            if (this.items[type] && this.items[type]["attributes"]) {
-                const attributes = Object.keys(this.items[type]["attributes"]);
+        let attributes = [];
 
-                for (const attribute of attributes) {
-                    let val = 0;
+        for (const item in this.slots) {
+            let itemAttributes = this.slots[item].getAttributes();
 
-                    if (!attr[attribute]) {
-                        val = this.items[type]["attributes"][attribute];
-                    } else {
-                        val = attr[attribute] + this.items[type]["attributes"][attribute];
-                    }
-
-                    attr[attribute] = val;
+            for (const attribute in itemAttributes) {
+                if (attributes[attribute]) {
+                    attributes[attribute] += itemAttributes[attribute];
+                } else {
+                    attributes[attribute] = itemAttributes[attribute];
                 }
             }
         }
 
-        this.cachedAttributes = attr;
-        return attr;
+        return attributes;
     }
 
     equip(item) {
@@ -40,22 +34,24 @@ export default class Equipment {
         }
 
         // the equipment slot is used, cant equip
-        if (this.items[item.slot]) {
+        if (this.slots[item.slot]) {
             return false;
         }
 
         // item is a weapon? figure out which hand to use
         if (item.slot === 'weapon') {
-            if (!this.items['mainhand']) {
-                return this.items['mainhand'] = item;
+            if (!this.slots['mainhand']) {
+                return this.slots['mainhand'] = item;
             }
 
-            if (!this.items['offhand'] && !item.tags.two_hand) {
-                return this.items['offhand'] = item;
+            if (!this.slots['offhand'] && !item.tags.two_hand) {
+                return this.slots['offhand'] = item;
             }
         }
 
         // regular item, just equip
-        return this.items[item.slot] = item;
+        return this.slots[item.slot] = item;
     }
 }
+
+export default Equipment;

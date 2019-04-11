@@ -9,7 +9,7 @@ for (const monster in m["common"]) {
     monsters.push(m["common"][monster]);
 }
 
-export default class Area {
+class Area {
     constructor(options) {
         this.name = options.name;
         this.act = options.act;
@@ -70,3 +70,5 @@ export default class Area {
         return this.monsters.shift();
     }
 }
+
+export default Area;

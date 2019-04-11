@@ -1,17 +1,13 @@
-export default class Item {
+class Item {
     constructor(options) {
         // basic item info
         this.type = options.type;
         this.class = options.class;
         this.slot = options.slot;
-
-        // item attributes
         this.name = options.name;
         this.image = options.image;
         this.attributes = options.attributes;
         this.tags = options.tags;
-
-        // item modifiers
         this.identified = options.identified ? options.identified : true;
         this.rarity = options.rarity ? options.rarity : 'normal';
         this.prefixes = options.prefixes ? options.prefixes : [];
@@ -32,7 +28,13 @@ export default class Item {
     setItemLevel(ilvl) {
         this.itemlevel = ilvl;
     }
+
+    getAttributes() {
+        return this.attributes;
+    }
 }
+
+export default Item;
 
 // fight monsters and figure out a chance to drop
 // an item.

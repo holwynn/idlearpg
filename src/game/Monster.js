@@ -1,4 +1,4 @@
-export default class Monster {
+class Monster {
     constructor(options) {
         this.type = options.type;
         this.name = options.name;
@@ -35,3 +35,5 @@ export default class Monster {
         return Math.floor(this.gold) * (this.level * 1.18);
     }
 }
+
+export default Monster;

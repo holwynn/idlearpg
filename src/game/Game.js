@@ -3,7 +3,7 @@ import areaNames from './types/areas.json'
 import attributes from './types/attributes.json';
 import { generate_random_name, find_next_area } from './areautils';
 
-export default class Game {
+class Game {
     constructor(options) {
         this.level = options.level ? options.level : 1;
         this.money = options.money;
@@ -101,10 +101,10 @@ export default class Game {
     }
 
     cacheStats() {
-        this.equipment.cacheAttributes();
+        const attributes = this.equipment.cacheAttributes();
 
-        for(const attribute in this.equipment.cachedAttributes) {
-            this.stats[attribute] += this.equipment.cachedAttributes[attribute];
+        for(const attribute in attributes) {
+            this.stats[attribute] += attributes[attribute];
         }
 
         return this.stats;
@@ -150,3 +150,5 @@ export default class Game {
 
     }
 }
+
+export default Game;
