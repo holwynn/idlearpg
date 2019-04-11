@@ -72,6 +72,7 @@
 
             <!-- Drrops -->
             <!-- <drops-component></drops-component> -->
+            <inventory-component></inventory-component>
         </div>
     </div>
 </template>
@@ -79,12 +80,14 @@
 <script>
 import AreaComponent from './AreaComponent';
 import DropsComponent from './DropsComponent';
+import InventoryComponent from './InventoryComponent';
 
 export default {
     name: 'GameComponent',
     components: {
           AreaComponent,
-          DropsComponent
+          DropsComponent,
+          InventoryComponent
     },
     computed: {
         game() {

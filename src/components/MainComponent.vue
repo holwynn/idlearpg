@@ -1,16 +1,15 @@
 <template>
-    <div class="container">
+    <div class="main-component">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-xl-1 offset-xl-3">
                 <map-component></map-component>
             </div>
 
-            <div class="col-lg-8">
+            <div class="col-xl-4">
                 <game-component></game-component>
-                <tab-switcher-component></tab-switcher-component>
             </div>
 
-            <div class="col-lg-2">
+            <div class="col-xl-1 map-float">
                 <equipment-component></equipment-component>
             </div>
         </div>

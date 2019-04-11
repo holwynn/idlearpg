@@ -5,7 +5,8 @@
             "class": "helmet",
             "name": "Jew Hat",
             "attributes": {
-                "increased_fire_damage": 10
+                "increased_fire_damage": 10,
+                "fire_damage": 2
             },
             "requirements": {
                 "level": 1

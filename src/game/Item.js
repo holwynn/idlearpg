@@ -3,6 +3,7 @@ export default class Item {
         // basic item info
         this.type = options.type;
         this.class = options.class;
+        this.slot = options.slot;
 
         // item attributes
         this.name = options.name;

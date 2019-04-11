@@ -1,5 +1,5 @@
 <template>
-    <div id="app" class="container">
+    <div id="app" class="container-fluid">
         <div class="row">
             <div class="col-md-12">
                 <header-component></header-component>
@@ -33,7 +33,5 @@ export default {
 </script>
 
 <style>
-#app {
 
-}
 </style>

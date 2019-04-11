@@ -3,21 +3,25 @@
         "cleaver": {
             "type": "equipment",
             "class": "axe",
+            "slot": "weapon",
             "name": "Cleaver",
             "attributes": {
                 "physical_damage": 10,
                 "attacks_per_second": 0.1,
-                "increased_elemental_damage": 100,
                 "fire_damage": 4,
-                "increased_fire_damage": 22
+                "increased_fire_damage": 0.15
             },
             "requirements": {
                 "level": 1
+            },
+            "tags": {
+                "two_hand": false
             }
         },
         "stone_axe": {
             "type": "equipment",
             "class": "axe",
+            "slot": "weapon",
             "name": "Stone Axe",
             "attributes": {
                 "physical_damage": 41,

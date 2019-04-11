@@ -8,8 +8,7 @@
 }
 
 body {
-    height: 2450px;
-    margin-top: 55px;
+    margin-top: 30px;
     font-family: "Fontin";
     background: #1e1e1e;
     color: #c8c8c8;
@@ -18,10 +17,6 @@ body {
 
 a {
     color: #c8c8c8;
-}
-
-#app {
-    max-width: 960px;
 }
 
 a:hover {
@@ -306,12 +301,19 @@ small {
 
 }
 
+.inventory {
+    /*border: 1px solid blue;*/
+    /*margin-left: 12px;*/
+    /*text-align: center;*/
+}
+
 .inventory-slot {
     height: 32px;
     width: 32px;
-    background-image: url(/assets/misc/inventoryslot32.png);
+    /*background-image: url(/assets/misc/inventoryslot32.png);*/
+    border: 1px solid #454F61;
     display: inline-block;
-    margin-left: 2px;
+    margin-left: 5px;
     margin-bottom: 2px;
 }
 
@@ -367,4 +369,8 @@ small {
 
 .item-tooltip-gold {
     margin-top: 10px;
+}
+
+.map-float: {
+
 }

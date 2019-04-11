@@ -20,8 +20,8 @@
                 </tbody>
             </table>
         </div>
-        <div v-else>
-            <div v-for="n in 68" class="inventory-slot">
+        <div v-else class="inventory">
+            <div v-for="n in 16" class="inventory-slot">
                 <div class="inventory-item">
                     <!-- <img v-tippy="{ html: '#item-description-'+n, interactive: true, reactive: true, theme: 'honeybee', duration: [0,0] }" v-bind:id="'item-'+n" src="/assets/items/dagger.png" alt="">
 

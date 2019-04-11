@@ -1,6 +1,10 @@
 {
   "name": "vuexproject",
+  "description": "Idle/Incremental game with ARPG elements.",
+  "homepage": "https://github.com/holwynn/hjol",
+  "author": "Ariel Holowinski",
   "version": "0.1.0",
+  "license": "GPL-2.0-or-later",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

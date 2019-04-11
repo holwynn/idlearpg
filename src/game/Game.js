@@ -1,7 +1,6 @@
 import Area from './Area';
-
 import areaNames from './types/areas.json'
-
+import attributes from './types/attributes.json';
 import { generate_random_name, find_next_area } from './areautils';
 
 export default class Game {
@@ -13,20 +12,7 @@ export default class Game {
         this.equipment = options.equipment;
         this.stats = [];
 
-        const attributes = [
-            "physical_damage",
-            "fire_damage",
-            "cold_damage",
-            "lightning_damage",
-            "attacks_per_second",
-            "increased_physical_damage",
-            "increased_fire_damage",
-            "increased_cold_damage",
-            "increased_lightning_damage",
-            "increased_elemental_damage"
-        ];
-
-        for (const attribute of attributes) {
+        for (const attribute in attributes) {
             this.stats[attribute] = 0;
         }
 
