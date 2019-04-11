@@ -6,6 +6,7 @@ import { generate_random_name, find_next_area } from './areautils';
 
 export default class Game {
     constructor(options) {
+        this.level = options.level ? options.level : 1;
         this.money = options.money;
         this.doneWithCampaign = options.doneWithCampaign;
         this.farming = false;

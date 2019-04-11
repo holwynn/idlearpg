@@ -1,0 +1,46 @@
+{
+    "physical_damage": {
+        "name": "Physical Damage",
+        "type": "additive"
+    },
+    "increased_physical_damage": {
+        "name": "Increased Physical Damage",
+        "type": "increment"
+    },
+    "attacks_per_second": {
+        "name": "Attacks per Second",
+        "type": "additive"
+    },
+    "attack_speed": {
+        "name": "Attack Speed",
+        "type": "increment"
+    },
+    "fire_damage": {
+        "name": "Fire Damage",
+        "type": "additive"
+    },
+    "cold_damage": {
+        "name": "Cold Damage",
+        "type": "additive"
+    },
+    "lightning_damage": {
+        "name": "Lightning Fire Damage",
+        "type": "additive"
+    },
+    "increased_fire_damage": {
+        "name": "Increased Fire Damage",
+        "type": "increment"
+    },
+    "increased_cold_damage": {
+        "name": "Increased Cold Damage",
+        "type": "increment"
+    },
+    "increased_lightning_damage": {
+        "name": "Increased Lightning Damage",
+        "type": "increment"
+    },
+    "increased_elemental_damage": {
+        "name": "Increased Elemental Damage",
+        "type": "increment"
+    }
+}

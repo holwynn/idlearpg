@@ -6,13 +6,16 @@
             "name": "Cleaver",
             "attributes": {
                 "physical_damage": 10,
-                "attacks_per_second": 0.1
+                "attacks_per_second": 0.1,
+                "increased_elemental_damage": 100,
+                "fire_damage": 4,
+                "increased_fire_damage": 22
             },
             "requirements": {
                 "level": 1
             }
         },
-        "Stone Axe": {
+        "stone_axe": {
             "type": "equipment",
             "class": "axe",
             "name": "Stone Axe",
@@ -22,6 +25,9 @@
             },
             "requirements": {
                 "level": 2
+            },
+            "tags": {
+                "two_hand": true
             }
         }
     },

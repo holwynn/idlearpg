@@ -1,0 +1,18 @@
+{
+    "bases": {
+        "jew_hat": {
+            "type": "equipment",
+            "class": "helmet",
+            "name": "Jew Hat",
+            "attributes": {
+                "increased_fire_damage": 10
+            },
+            "requirements": {
+                "level": 1
+            }
+        }
+    },
+    "uniques": {
+
+    }
+}

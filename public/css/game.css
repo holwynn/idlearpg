@@ -324,12 +324,32 @@ small {
     font-size: 12px;
 }
 
-.tippy-tooltip.honeybee-theme {
-  /* Your styling here. Example: */
+.tippy-tooltip.normal-theme {
+    border: 1px solid #EBCB8B;
+    text-align: left;
+}
+
+.tippy-tooltip.magic-theme {
+    border: 1px solid #5E81AC;
+    text-align: left;
+}
+
+.tippy-tooltip.rare-theme {
+    border: 2px solid #EBCB8B;
+    text-align: left;
+}
+
+.tippy-tooltip.unique-theme {
+    border: 2px solid #BF616A;
+    text-align: left;
+}
+
+.tippy-backdrop {
   background-color: #1a1a1a;
-  border: 1px solid #efeef1;
-  text-align: left;
-  /*width: 200px;*/
+}
+
+.tooltip-header {
+    margin-bottom: 10px;
 }
 
 .item-tooltip-name,
@@ -338,8 +358,7 @@ small {
 }
 
 .tooltip-options {
-    margin-top: 10px;
-    border-top: 1px solid #efeef1;
+    margin-top: 12px;
 }
 
 .item-tooltip-options {

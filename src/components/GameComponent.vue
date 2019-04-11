@@ -3,7 +3,7 @@
         <div class="col-md-12 widget-content">
             <p style="float: left;">
                 <strong class="item-magic">ahw</strong>
-                <small> Wretched Witch</small> 98
+                <small> Wretched Witch</small> {{ this.game.level }}
             </p>
 
             <p style="float: right;">

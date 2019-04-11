@@ -8,12 +8,14 @@ export default class Item {
         this.name = options.name;
         this.image = options.image;
         this.attributes = options.attributes;
+        this.tags = options.tags;
 
         // item modifiers
         this.identified = options.identified ? options.identified : true;
         this.rarity = options.rarity ? options.rarity : 'normal';
         this.prefixes = options.prefixes ? options.prefixes : [];
         this.suffixes = options.suffixes ? options.suffixes : [];
+        this.level = options.level
         this.itemlevel = options.itemlevel;
         this.requirements = options.requirements;
     }
@@ -24,6 +26,10 @@ export default class Item {
 
     addSuffix(suffix) {
         this.suffixes.push(suffix);
+    }
+
+    setItemLevel(ilvl) {
+        this.itemlevel = ilvl;
     }
 }
 

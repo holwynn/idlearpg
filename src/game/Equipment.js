@@ -1,7 +1,17 @@
 export default class Equipment {
     constructor(options) {
-        this.types = ['mainhand', 'offhand', 'helmet', 'bodyarmour', 'gloves',
-                      'boots', 'lefring', 'rightring', 'amulet'];
+        this.types = ['mainhand', 'offhand', 'helmet', 'bodyarmour', 'belt',
+                     'gloves', 'boots', 'amulet', 'leftring', 'rightring'];
+        this.items = [];
+
+        for (const type of this.types) {
+            // console.log(type);
+            this.items[type] = options[type];
+        }
+
+        console.log(this.items);
+
+        // still needed for cacheattributes
         this.mainhand = options.mainhand;
         this.offhand = options.offhand;
         this.helmet = options.helmet;

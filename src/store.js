@@ -8,9 +8,9 @@ import { create_item_from_base } from './game/itemutils';
 
 // create_item_from_base('daggers', 'frost_dagger')
 const startingEquipment = new Equipment({
-    mainhand: create_item_from_base('axes', 'cleaver'),
+    mainhand: create_item_from_base('axes', 'stone_axe'),
     offhand: undefined,
-    helmet: undefined,
+    helmet: create_item_from_base('helmets', 'jew_hat'),
     bodyarmour: undefined,
     gloves: undefined,
     boots: undefined,
