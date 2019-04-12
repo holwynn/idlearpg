@@ -1,32 +1,16 @@
 <template>
-    <div class="">
-        <div v-if="inventory.length > 0" class="inventory">
-            <table class="table table-sm table-striped shadow">
-                <thead>
-                    <tr>
-                        <th>Item</th>
-                        <th>Type</th>
-                        <th>Requirement</th>
-                        <th>Options</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Identify Scroll (x 203)</td>
-                        <td>Scroll</td>
-                        <td>none</td>
-                        <td><span class="item-legendary">stash</span> - <span class="text-success">vendor</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div v-else class="inventory">
-            <div v-for="n in 16" class="inventory-slot">
-                <div class="inventory-item">
-                    <!-- <img v-tippy="{ html: '#item-description-'+n, interactive: true, reactive: true, theme: 'honeybee', duration: [0,0] }" v-bind:id="'item-'+n" src="/assets/items/dagger.png" alt="">
+    <div class="inventory">
+        <div v-for="item in inventory" class="inventory-slot">
+            <div class="inventory-item">
+                <!-- <img v-tippy="{ html: '#item-description-'+n, interactive: true, reactive: true, theme: 'honeybee', duration: [0,0] }" v-bind:id="'item-'+n" src="/assets/items/dagger.png" alt="">
 
-                    <item-tooltip-component v-bind:itemId="'item-description-'+n"></item-tooltip-component> -->
-                </div>
+                <item-tooltip-component v-bind:itemId="'item-description-'+n"></item-tooltip-component> -->
+
+                <span v-tippy="{ html: '#'+item.id, interactive: true, reactive: true, theme: 'normal', duration: [0,0] }">
+                    <img :src="'/assets/items/'+item.image" alt="">
+                </span>
+
+                <item-tooltip-component :inventory="true" :itemId="item.id" :item="item"></item-tooltip-component>
             </div>
         </div>
     </div>
@@ -43,9 +27,9 @@ export default {
     components: {
         ItemTooltipComponent,
     },
-    data() {
-        return {
-            inventory: []
+    computed: {
+        inventory() {
+            return this.$store.state.game.getInventory();
         }
     }
 }

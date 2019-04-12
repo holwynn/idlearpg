@@ -24,7 +24,31 @@ const startingEquipment = new Equipment({
     offhand: create_item_from_base('axes', 'cleaver'),
 });
 
-let game = new Game({ money: 0, equipment: startingEquipment });
+const inventory = [
+    create_item_from_base('daggers', 'rusty_dagger', 2),
+    create_item_from_base('daggers', 'frost_dagger', 2),
+    create_item_from_base('helmets', 'elven_helm', 2),
+    create_item_from_base('daggers', 'rusty_dagger', 2),
+    create_item_from_base('daggers', 'frost_dagger',
+    create_item_from_base('daggers', 'rusty_dagger', 2),
+    create_item_from_base('daggers', 'frost_dagger', 2),
+    create_item_from_base('helmets', 'elven_helm', 2),
+    create_item_from_base('bodyarmours', 'elven_ringmail', 2),
+    create_item_from_base('boots', 'elven_boots', 2),2),
+    create_item_from_base('helmets', 'elven_helm', 2),
+    create_item_from_base('bodyarmours', 'elven_ringmail', 2),
+    create_item_from_base('boots', 'elven_boots', 2),
+    create_item_from_base('bodyarmours', 'elven_ringmail', 2),
+    create_item_from_base('boots', 'elven_boots', 2),
+]
+
+let game = new Game({
+    money: 0,
+    equipment: startingEquipment,
+    inventory: inventory
+});
+
+console.log(game.inventory);
 
 const store = new Vuex.Store({ state: { game: game } });
 

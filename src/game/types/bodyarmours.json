@@ -1,10 +1,10 @@
 {
     "bases": {
-        "elven_helm": {
+        "elven_ringmail": {
             "type": "equipment",
-            "class": "helmet",
-            "name": "Elven Helm",
-            "image": "elven_helm.png",
+            "class": "bodyarmour",
+            "name": "Elven Ringmail",
+            "image": "elven_ringmail.png",
             "attributes": {
                 "increased_fire_damage": 10,
                 "fire_damage": 2

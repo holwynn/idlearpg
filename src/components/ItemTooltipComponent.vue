@@ -70,7 +70,7 @@ export default {
     },
     computed: {
         canUse() {
-            return this.item.requirements.level <= this.$store.state.game.level;
+            return this.item.itemlevel <= this.$store.state.game.level;
         },
         weaponSpeed() {
             if (this.item.attributes.attacks_per_second > 1) {

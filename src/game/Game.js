@@ -18,7 +18,7 @@ class Game {
 
         this.cacheStats();
         this.damage = this.calculateDamage();
-        this.inventory = [];
+        this.inventory = options.inventory;
         this.generateArea();
         this.setGameLoop();
     }
@@ -64,6 +64,10 @@ class Game {
 
     getCurrentArea() {
         return this.area;
+    }
+
+    getInventory() {
+        return this.inventory;
     }
 
     clickAttack() {

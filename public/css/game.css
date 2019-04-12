@@ -313,13 +313,12 @@ small {
     /*background-image: url(/assets/misc/inventoryslot32.png);*/
     border: 1px solid #454F61;
     display: inline-block;
-    margin-left: 5px;
-    margin-bottom: 2px;
+    margin-left: 6px;
 }
 
 .inventory-item {
-    padding-top: 6px;
-    padding-left: 6px;
+    margin-top: 4px;
+    text-align: center;
 }
 
 .item-tooltip {

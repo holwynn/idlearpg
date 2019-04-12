@@ -1,14 +1,23 @@
 <template>
-    <div id="app" class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <header-component></header-component>
+    <div id="app">
+        <div v-if="loaded" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <header-component></header-component>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <main-component></main-component>
+                </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-md-12">
-                <main-component></main-component>
+        <div v-else>
+            <div class="row">
+                <div class="col-md-12">
+                    <h5>Loading game...</h5>
+                </div>
             </div>
         </div>
     </div>
@@ -24,6 +33,12 @@ export default {
         return {
         name: this.$store.state.name
         }
+    },
+    beforeCreate() {
+        this.loaded = false;
+    },
+    created() {
+        this.loaded = true;
     },
     components: {
         HeaderComponent,

@@ -15,6 +15,10 @@ class Item {
         this.level = options.level
         this.itemlevel = options.itemlevel;
         this.requirements = options.requirements;
+
+        const set1 = Math.floor(Math.random(100) * 100);
+        const set2 = Math.floor(Math.random(100) * 100);
+        this.id = this.class + set1 + set2;
     }
 
     addPrefix(prefix) {
