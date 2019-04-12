@@ -36,6 +36,10 @@ class Item {
     getAttributes() {
         return this.attributes;
     }
+
+    isWeapon() {
+        return this.slot == 'onehand' || this.slot == 'twohand';
+    }
 }
 
 export default Item;

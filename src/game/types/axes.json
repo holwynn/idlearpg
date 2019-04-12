@@ -2,26 +2,22 @@
     "bases": {
         "cleaver": {
             "type": "equipment",
+            "slot": "onehand",
             "class": "axe",
-            "slot": "weapon",
             "name": "Cleaver",
+            "image": "axe.png",
             "attributes": {
                 "physical_damage": 10,
-                "attacks_per_second": 0.1,
-                "fire_damage": 4,
-                "increased_fire_damage": 0.15
+                "attacks_per_second": 0.1
             },
             "requirements": {
                 "level": 1
-            },
-            "tags": {
-                "two_hand": false
             }
         },
         "stone_axe": {
             "type": "equipment",
             "class": "axe",
-            "slot": "weapon",
+            "slot": "onehand",
             "name": "Stone Axe",
             "attributes": {
                 "physical_damage": 41,
@@ -29,9 +25,6 @@
             },
             "requirements": {
                 "level": 2
-            },
-            "tags": {
-                "two_hand": true
             }
         }
     },

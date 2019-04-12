@@ -35,13 +35,10 @@ export default {
     },
     computed: {
         equipment() {
-            return this.$store.state.game.getEquipment();
+            return this.$store.state.game.equipment;
         },
         types() {
             return equipmentTypes;
-        },
-        damagePerClick() {
-            return this.$store.state.game.damage;
         }
     },
     methods: {

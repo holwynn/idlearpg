@@ -32,7 +32,7 @@
                             <small class="monster-type">Beast level {{ currentMonster.level }}</small>
                         </div>
                         <div class="monster-image">
-                            <img class="attack-click-image" :src="monsterImage" alt="attack-click-image">
+                            <!-- <img class="attack-click-image" :src="monsterImage" alt="attack-click-image"> -->
                         </div>
                     </div>
                 </div>

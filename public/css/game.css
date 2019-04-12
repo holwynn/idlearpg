@@ -23,6 +23,10 @@ a:hover {
     color: #c8c8c8;
 }
 
+.link {
+    cursor: pointer;
+}
+
 .larger-font {
     font-size: 18px;
 }
@@ -302,18 +306,20 @@ small {
 }
 
 .inventory {
-    /*border: 1px solid blue;*/
-    /*margin-left: 12px;*/
-    /*text-align: center;*/
+    margin: 0;
+    padding: 0;
 }
 
 .inventory-slot {
+    /*margin-top: 5px;*/
     height: 32px;
     width: 32px;
     /*background-image: url(/assets/misc/inventoryslot32.png);*/
-    border: 1px solid #454F61;
+    border: 2px solid #2E3440;
+    /*border: 1px solid blue;*/
     display: inline-block;
-    margin-left: 6px;
+    margin-right: 3px;
+    margin-top: 5px;
 }
 
 .inventory-item {

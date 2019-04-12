@@ -2,6 +2,7 @@
     "bases": {
         "elven_helm": {
             "type": "equipment",
+            "slot": "helmet",
             "class": "helmet",
             "name": "Elven Helm",
             "image": "elven_helm.png",

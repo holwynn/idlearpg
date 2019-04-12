@@ -45,8 +45,8 @@
                     <inventory-component></inventory-component>
                 </div>
                 <div class="col-md-6">
-                    <small>Drops</small>
-                    <drops-component></drops-component>
+                    <!-- <small>Drops</small>
+                    <drops-component></drops-component> -->
                 </div>
             </div>
         </div>

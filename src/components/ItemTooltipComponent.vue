@@ -6,10 +6,7 @@
                 <span class="item-tooltip-stat" :class="{ 'text-fire': !canUse, 'text-success': canUse}">
                     {{ item.class | capitalize }} Level {{ item.itemlevel }}
                 </span>
-
-                <span v-if="item.tags">
-                    {{ item.tags }}
-                </span>
+                <span v-if="item.isWeapon()">{{ item.slot | capitalize }}</span>
             </div>
         </div>
 
@@ -25,8 +22,12 @@
         <span class="item-tooltip-stat item-tooltip-gold">Sells for 283 <img height="16px" src="/assets/misc/gold.png" alt=""></span>
         <div v-if="inventory" class="tooltip-options">
             <div class="float-left">
-                <span class="item-tooltip-options"><span class="text-muted">Equip</span></span>
-                <span class="item-tooltip-options"><span class="text-rare">Stash</span></span>
+                <span @click="equip(item)" class="item-tooltip-options link" :class="{ 'text-muted': !this.canUse}">
+                    Equip
+                </span>
+                <span class="item-tooltip-options text-rare">
+                    Stash
+                </span>
             </div>
 
             <div class="float-right">
@@ -75,24 +76,15 @@ export default {
         weaponSpeed() {
             if (this.item.attributes.attacks_per_second > 1) {
                 return 'Very high speed';
-            }
-
-            if (this.item.attributes.attacks_per_second >= 0.65) {
+            } else if (this.item.attributes.attacks_per_second >= 0.65) {
                 return 'High speed';
-            }
-
-            if (this.item.attributes.attacks_per_second >= 0.35) {
+            } else if (this.item.attributes.attacks_per_second >= 0.35) {
                 return 'Medium speed';
-            }
-
-            if (this.item.attributes.attacks_per_second >= 0.15) {
+            } else if (this.item.attributes.attacks_per_second >= 0.15) {
                 return 'Slow speed';
-            }
-
-            if (this.item.attributes.attacks_per_second >= 0.01) {
+            } else if (this.item.attributes.attacks_per_second >= 0.01) {
                 return 'Very low speed';
             }
-
         }
     },
     methods: {
@@ -101,6 +93,9 @@ export default {
         },
         attributeType(attribute) {
             return (attributes[attribute].type === 'increment') ? '%' : '';
+        },
+        equip(item) {
+            this.$store.state.game.equip(item.id);
         }
     }
 }

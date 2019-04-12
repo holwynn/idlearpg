@@ -2,6 +2,7 @@
     "bases": {
         "rusty_dagger": {
             "type": "equipment",
+            "slot": "onehand",
             "class": "dagger",
             "name": "Rusty Dagger",
             "image": "dagger.png",
@@ -15,6 +16,7 @@
         },
         "frost_dagger": {
             "type": "equipment",
+            "slot": "onehand",
             "class": "dagger",
             "name": "Frost Dagger",
             "image": "dagger.png",

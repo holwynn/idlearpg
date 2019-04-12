@@ -1,16 +1,13 @@
 <template>
-    <div class="inventory">
-        <div v-for="item in inventory" class="inventory-slot">
-            <div class="inventory-item">
-                <!-- <img v-tippy="{ html: '#item-description-'+n, interactive: true, reactive: true, theme: 'honeybee', duration: [0,0] }" v-bind:id="'item-'+n" src="/assets/items/dagger.png" alt="">
+    <div class="inventory row">
+        <div v-for="n in 24" class="inventory-slot">
+            <div v-if="inventory[n]">
+                <div class="inventory-item" v-tippy="{ html: '#'+inventory[n].id, interactive: true, reactive: true, theme: 'normal', duration: [0,0] }">
+                    <!-- <small>It</small> -->
+                    <img :src="'/assets/items/'+inventory[n].image" alt="">
+                </div>
 
-                <item-tooltip-component v-bind:itemId="'item-description-'+n"></item-tooltip-component> -->
-
-                <span v-tippy="{ html: '#'+item.id, interactive: true, reactive: true, theme: 'normal', duration: [0,0] }">
-                    <img :src="'/assets/items/'+item.image" alt="">
-                </span>
-
-                <item-tooltip-component :inventory="true" :itemId="item.id" :item="item"></item-tooltip-component>
+                <item-tooltip-component :inventory="true" :itemId="inventory[n].id" :item="inventory[n]"></item-tooltip-component>
             </div>
         </div>
     </div>

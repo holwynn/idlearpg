@@ -2,9 +2,12 @@ import Area from './Area';
 import areaNames from './types/areas.json'
 import attributes from './types/attributes.json';
 import { generate_random_name, find_next_area } from './areautils';
+import * as damageutils from './damageutils';
 
 class Game {
     constructor(options) {
+        this.damageutils = damageutils;
+
         this.level = options.level ? options.level : 1;
         this.money = options.money;
         this.doneWithCampaign = options.doneWithCampaign;
@@ -20,7 +23,6 @@ class Game {
         this.damage = this.calculateDamage();
         this.inventory = options.inventory;
         this.generateArea();
-        this.setGameLoop();
     }
 
     earn(x) {
@@ -114,44 +116,19 @@ class Game {
         return this.stats;
     }
 
-    getPhysicalDamage() {
-        if (this.stats["physical_damage"] === 0) {
-            return 0;
-        }
-
-        return this.stats["physical_damage"] * (1 + this.stats["increased_physical_damage"]);
-    }
-
-    getLightningDamage() {
-        if (this.stats["lightning_damage"] === 0) {
-            return 0;
-        }
-
-        return this.stats["lightning_damage"] * (1 + this.stats["increased_lightning_damage"]) + (1 + this.stats["increased_elemental_damage"]);
-    }
-
-    getColdDamage() {
-        if (this.stats["cold_damage"] === 0) {
-            return 0;
-        }
-
-        return this.stats["cold_damage"] * (1 + this.stats["increased_cold_damage"]) + (1 + this.stats["increased_elemental_damage"]);
-    }
-
-    getFireDamage() {
-        if (this.stats["fire_damage"] === 0) {
-            return 0;
-        }
-
-        return this.stats["fire_damage"] * (1 + this.stats["increased_fire_damage"]) + (1 + this.stats["increased_elemental_damage"]);
-    }
-
     calculateDamage() {
-        return this.getPhysicalDamage() + this.getLightningDamage() + this.getColdDamage() + this.getFireDamage();
+        return this.damageutils.full_damage(this.stats);
     }
 
-    setGameLoop() {
+    equip(id) {
+        let item = this.inventory.filter(x => x.id === id);
 
+        if (!item) {
+            console.log('cant equip that item');
+            return false;
+        }
+
+        this.equipment.equip(item[0]);
     }
 }
 

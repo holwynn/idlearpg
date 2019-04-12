@@ -30,7 +30,7 @@ class Equipment {
     equip(item) {
         // no item
         if (item === undefined) {
-            return item;
+            return false;
         }
 
         // the equipment slot is used, cant equip
@@ -39,17 +39,23 @@ class Equipment {
         }
 
         // item is a weapon? figure out which hand to use
-        if (item.slot === 'weapon') {
+        if (item.slot === 'onehand') {
             if (!this.slots['mainhand']) {
-                return this.slots['mainhand'] = item;
+                this.slots['mainhand'] = item;
+                console.log(this.slots.mainhand);
+                return;
             }
 
-            if (!this.slots['offhand'] && !item.tags.two_hand) {
-                return this.slots['offhand'] = item;
+            if (!this.slots['offhand']) {
+                this.slots['offhand'] = item;
+                console.log(this.slots['offhand'].name);
+                return;
             }
         }
 
+        // TODO: add code for two hand
         // regular item, just equip
+        console.log(this.slots[item.slot]);
         return this.slots[item.slot] = item;
     }
 }

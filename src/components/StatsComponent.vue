@@ -5,19 +5,19 @@
                 <ul class="list-unstyled damage-stats">
                     <li v-if="this.stats['fire_damage'] > 0" class="list">
                         <span class="text-fire">Fire damage: </span>
-                        {{ (this.game.getFireDamage()).toFixed(0) }}
+                        {{ this.game.damageutils.fire_damage(this.game.stats).toFixed(0) }}
                     </li>
                     <li v-if="this.stats['cold_damage'] > 0" class="list">
                         <span class="text-cold">Cold damage: </span>
-                        {{ (this.game.getColdDamage()).toFixed(0) }}
+                        {{ this.game.damageutils.cold_damage(this.game.stats).toFixed(0) }}
                     </li>
-                    <li v-if="this.stats['lighting_damage'] > 0" class="list">
+                    <li v-if="this.stats['lightning_damage'] > 0" class="list">
                         <span class="text-lightning">Lightning damage: </span>
-                        {{ (this.game.getLightingDamage()).toFixed(0) }}
+                        {{ this.game.damageutils.lightning_damage(this.game.stats).toFixed(0) }}
                     </li>
                     <li v-if="this.stats['physical_damage'] > 0" class="list">
                         <span class="text-light">Physical damage: </span>
-                        {{ (this.stats["physical_damage"].toFixed(0)) }}
+                        {{ this.game.damageutils.physical_damage(this.game.stats) }}
                     </li>
                     <li class="list">
                         <span class="text-light">Click damage: </span>
@@ -59,6 +59,7 @@ export default {
             return this.$store.state.game
         },
         stats() {
+            console.log(this.game.stats["lightning_damage"]);
             return this.game.stats;
         },
         dps() {
